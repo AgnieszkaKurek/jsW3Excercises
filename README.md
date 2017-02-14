@@ -1,2 +1,3 @@
 # jsW3Excercises
-JavaScript Exercises
+ JavaScript Exercises.
+ Exercises are  the: http://www.w3resource.com/javascript-exercises/
