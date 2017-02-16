@@ -6,17 +6,17 @@ function formatAsTwoDigits(timeUnit) {
 
 function formatDate(date) {
     var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    var weekDays = `${days[date.getDay()]}`;
+    var formatWeekDays = `${days[date.getDay()]}`;
     var hours = date.getHours();
     var ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
     var formatHours = formatAsTwoDigits(hours);
-    var minutes = formatAsTwoDigits(date.getMinutes());
-    var seconds = formatAsTwoDigits(date.getSeconds());
-    var time = `${weekDays} ${formatHours} ${ampm} ${minutes}: ${seconds}`;
+    var formatMinutes = formatAsTwoDigits(date.getMinutes());
+    var formatSeconds = formatAsTwoDigits(date.getSeconds());
+    var time = `${formatWeekDays} ${formatHours} ${ampm} ${formatMinutes}: ${formatSeconds}`;
     return time;
-
 };
+
 var previousDate = new Date(2017, 2, 2, 2, 2, 2);
 var formattedPreviousDate = formatDate(previousDate);
 document.getElementById("previousDate").innerHTML = formattedPreviousDate;
