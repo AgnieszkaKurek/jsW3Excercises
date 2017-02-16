@@ -17,17 +17,9 @@ function formatDate(date) {
     return time;
 };
 
-var previousDate = new Date(2017, 2, 2, 2, 2, 2);
-var formattedPreviousDate = formatDate(previousDate);
-document.getElementById("previousDate").innerHTML = formattedPreviousDate;
-console.log(formattedPreviousDate);
-
-var currentDate = new Date();
-var formattedDate = formatDate(currentDate);
-document.getElementById("currentDate").innerHTML = formattedDate;
-console.log(formattedDate);
-
-var nextDate = new Date(2017, 11, 11, 11, 11, 11);
-var formattedNextDate = formatDate(nextDate);
-document.getElementById("nextDate").innerHTML = formattedNextDate;
-console.log(formattedNextDate);
+function formatAndDisplayDate(date, id) {
+    document.getElementById(id).innerHTML = date;
+};
+formatAndDisplayDate(new Date(2017, 2, 2, 2, 2, 2), "previousDate");
+formatAndDisplayDate(new Date, "currentDate");
+formatAndDisplayDate(new Date((2017, 11, 11, 11, 11, 11)), "nextDate");
