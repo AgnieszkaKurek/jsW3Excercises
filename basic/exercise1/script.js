@@ -1,4 +1,5 @@
 'use strict';
+
 function formatAsTwoDigits(timeUnit) {
     return (timeUnit < 10) ? '0' + timeUnit : timeUnit;
 };
@@ -9,10 +10,12 @@ function formatDate(date) {
     var hours = date.getHours();
     var ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
+    var formatHours = formatAsTwoDigits(hours);
     var minutes = formatAsTwoDigits(date.getMinutes());
     var seconds = formatAsTwoDigits(date.getSeconds());
-    var time = `${weekDays} ${formatAsTwoDigits(hours)} ${ampm} ${minutes}: ${seconds}`;
+    var time = `${weekDays} ${formatHours} ${ampm} ${minutes}: ${seconds}`;
     return time;
+
 };
 var previousDate = new Date(2017, 2, 2, 2, 2, 2);
 var formattedPreviousDate = formatDate(previousDate);
