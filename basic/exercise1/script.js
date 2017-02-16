@@ -1,28 +1,20 @@
 'use strict';
-function formatDate(date) {
 
+function formatAsTwoDigits(timeUnit) {
+    return (timeUnit < 10) ? '0' + timeUnit : timeUnit;
+};
+
+function formatDate(date) {
     var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    var weekDays = `${days[date.getDay()]}`;
+    var formatWeekDays = `${days[date.getDay()]}`;
     var hours = date.getHours();
     var ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
-    if (hours < 10) {
-        hours = "0" + hours;
-    };
-
-    var minutes = date.getMinutes();
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    };
-
-    var seconds = date.getSeconds();
-    if (seconds < 10) {
-        seconds = "0" + seconds;
-    };
-
-    var time = `${weekDays} ${hours} ${ampm} ${minutes}: ${seconds}`;
+    var formatHours = formatAsTwoDigits(hours);
+    var formatMinutes = formatAsTwoDigits(date.getMinutes());
+    var formatSeconds = formatAsTwoDigits(date.getSeconds());
+    var time = `${formatWeekDays} ${formatHours} ${ampm} ${formatMinutes}: ${formatSeconds}`;
     return time;
-
 };
 
 var previousDate = new Date(2017, 2, 2, 2, 2, 2);
