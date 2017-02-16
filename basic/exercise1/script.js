@@ -1,17 +1,15 @@
 'use strict';
 function formatDate(date) {
-    var aDay = date.getDate();
-    var Month = date.getMonth();
-    var Year = date.getFullYear();
-    var thisDate = `${aDay}:${Month}:${Year}`;
+
     var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    var weekDays = `${days[date.getDay()]}`;  
+    var weekDays = `${days[date.getDay()]}`;
     var hours = date.getHours();
     var ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
     if (hours < 10) {
         hours = "0" + hours;
     };
+
     var minutes = date.getMinutes();
     if (minutes < 10) {
         minutes = "0" + minutes;
@@ -24,7 +22,7 @@ function formatDate(date) {
 
     var time = `${weekDays} ${hours} ${ampm} ${minutes}: ${seconds}`;
     return time;
-    
+
 };
 
 var previousDate = new Date(2017, 2, 2, 2, 2, 2);
