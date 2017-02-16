@@ -1,7 +1,7 @@
 'use strict';
 
 function formatAsTwoDigits(timeUnit) {
-    return (timeUnit < 10) ? '0' + timeUnit : timeUnit;
+    return (timeUnit < 10) ? `0${timeUnit}` : timeUnit;
 };
 
 function formatDate(date) {
