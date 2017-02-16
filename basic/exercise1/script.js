@@ -18,9 +18,10 @@ function formatDate(date) {
 };
 
 function formatAndDisplayDate(date, id) {
-    var fdate = formatDate(date)
+    var fdate = formatDate(date);
     document.getElementById(id).innerHTML = fdate;
 };
+
 formatAndDisplayDate(new Date(2017, 2, 2, 2, 2, 2), "previousDate");
-formatAndDisplayDate(new Date, "currentDate");
+formatAndDisplayDate(new Date(), "currentDate");
 formatAndDisplayDate(new Date(2017, 11, 11, 11, 11, 11), "nextDate");
