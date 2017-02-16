@@ -1,9 +1,6 @@
 'use strict';
 function formatDate(date) {
-    function insertingZero(i) {
-        return (i < 10) ? '0' + i : i;
-    };
-
+   
     var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     var weekDays = `${days[date.getDay()]}`;
     var hours = insertingZero(date.getHours());
@@ -15,6 +12,10 @@ function formatDate(date) {
     var time = `${weekDays} ${hours} ${ampm} ${minutes}: ${seconds}`;
     return time;
 };
+
+ function insertingZero(timeUnit) {
+        return (timeUnit < 10) ? '0' + timeUnit : timeUnit;
+    };
 
 var previousDate = new Date(2017, 2, 2, 2, 2, 2);
 var formattedPreviousDate = formatDate(previousDate);
