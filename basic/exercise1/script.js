@@ -24,13 +24,13 @@ function formatshortDate(date) {
     return shortDate;
 
 };
-console.log(formatshortDate(new Date()));
 
-function formatAndDisplayDate(date, id) {
-    var fdate = formatDate(date);
+function formatAndDisplayDate(date, id, formatFunction) {
+    var fdate = formatFunction(date);
     document.getElementById(id).innerHTML = fdate;
 };
 
-formatAndDisplayDate(new Date(2017, 2, 2, 2, 2, 2), "previousDate");
-formatAndDisplayDate(new Date(), "currentDate");
-formatAndDisplayDate(new Date(2017, 11, 11, 11, 11, 11), "nextDate");
+
+formatAndDisplayDate(new Date(2017, 2, 2, 2, 2, 2), "previousDate", formatshortDate);
+formatAndDisplayDate(new Date(), "currentDate",formatDate);
+formatAndDisplayDate(new Date(2017, 11, 11, 11, 11, 11), "nextDate",formatDate );
