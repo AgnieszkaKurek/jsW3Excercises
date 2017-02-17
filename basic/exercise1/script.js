@@ -29,6 +29,7 @@ function formatAndDisplayDate(date, id, formatFunction) {
     var fdate = formatFunction(date);
     document.getElementById(id).innerHTML = fdate;
 };
+
 formatAndDisplayDate(new Date(1986, 4, 2, 5, 7, 6), "Date1", formatshortDate);
 formatAndDisplayDate(new Date(2009, 09, 20, 9, 10, 2), "Date2", formatshortDate);
 formatAndDisplayDate(new Date(2017, 2, 2, 2, 2, 2), "Date3", formatDate);
