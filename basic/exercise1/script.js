@@ -16,6 +16,7 @@ function formatDate(date) {
     var time = `${formatWeekDays} ${formatHours} ${ampm} ${formatMinutes}: ${formatSeconds}`;
     return time;
 };
+
 function formatShortDate(date) {
     var month = formatAsTwoDigits(date.getMonth());
     var day = formatAsTwoDigits(date.getDay());
