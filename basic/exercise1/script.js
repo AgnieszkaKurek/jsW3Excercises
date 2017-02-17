@@ -16,15 +16,15 @@ function formatDate(date) {
     var time = `${formatWeekDays} ${formatHours} ${ampm} ${formatMinutes}: ${formatSeconds}`;
     return time;
 };
-function formatshortDate(date){
-   var month = formatAsTwoDigits(date.getMonth());
-   var day = formatAsTwoDigits(date.getDay());
-   var year = date.getFullYear();
-   var shortDate = `${month}-${day}-${year}`;
-   return shortDate;
-   
+function formatshortDate(date) {
+    var month = formatAsTwoDigits(date.getMonth());
+    var day = formatAsTwoDigits(date.getDay());
+    var year = date.getFullYear();
+    var shortDate = `${month}-${day}-${year}`;
+    return shortDate;
+
 };
-console.log(formatshortDate(new Date ()));
+console.log(formatshortDate(new Date()));
 
 function formatAndDisplayDate(date, id) {
     var fdate = formatDate(date);
