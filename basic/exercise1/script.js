@@ -5,6 +5,10 @@ function formatAsTwoDigits(timeUnit) {
 };
 
 function formatDate(date) {
+    if (!(date instanceof Date)) {
+        throw new TypeError("Parameter should be of date type");
+    };
+    
     var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     var formatWeekDays = `${days[date.getDay()]}`;
     var hours = date.getHours();
