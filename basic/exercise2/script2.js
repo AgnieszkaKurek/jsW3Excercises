@@ -1,14 +1,12 @@
 'use strict';
 
 function validateSide(side) {
-
     if (side <= 0) {
         throw new Error("All sides should be bigger than 0");
     };
 };
 
 function triangleArea(side1, side2, side3) {
-
     validateSide(side1);
     validateSide(side2);
     validateSide(side3);
