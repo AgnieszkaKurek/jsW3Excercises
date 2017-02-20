@@ -1,16 +1,17 @@
 'use strict';
 
-function triangleArea(side1, side2, side3) {
-    if (!(side1 >= 0)) {
-        throw new Error("side1 should be a longer than 0");
-    };
-    if (!(side2 >= 0)) {
-        throw new Error("side2 should be a longer than 0");
-    };
-    if (!(side3 >= 0)) {
-        throw new Error("side3 should be a longer than 0");
-    };
+function validateSide(side) {
 
+    if (side <= 0) {
+        throw new Error("All sides should be bigger than 0");
+    };
+};
+
+function triangleArea(side1, side2, side3) {
+
+    validateSide(side1);
+    validateSide(side2);
+    validateSide(side3);
     var trianglePerimeter = (side1 + side2 + side3) / 2;
     var trianglePerSide1 = trianglePerimeter - side1;
     var trianglePerSide2 = trianglePerimeter - side2;
