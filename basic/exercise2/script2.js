@@ -1,13 +1,13 @@
 'use strict';
 
-function findingTriangleArea(side1, side2, side3) {
-    if (!(side1 > 0)) {
+function triangleArea(side1, side2, side3) {
+    if (!(side1 >= 0)) {
         throw new Error("side1 should be a longer than 0");
     };
-    if (!(side2 > 0)) {
+    if (!(side2 >= 0)) {
         throw new Error("side2 should be a longer than 0");
     };
-    if (!(side3 > 0)) {
+    if (!(side3 >= 0)) {
         throw new Error("side3 should be a longer than 0");
     };
 
@@ -19,5 +19,4 @@ function findingTriangleArea(side1, side2, side3) {
     return triangleAreaMath;
 };
 
-var triangleArea = findingTriangleArea;
 document.getElementById("triangle").innerHTML = triangleArea(5, 6, 7);
