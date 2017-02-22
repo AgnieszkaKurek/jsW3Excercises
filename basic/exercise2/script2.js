@@ -13,7 +13,7 @@ function validateAsTriangleSides(propablyLongestSide, propablyShortestSide1, pro
     if (propablyLongestSide > propablyShortestSide1 + propablyShortestSide2) {
         throw new Error("One side should be smaller than sum of two other sides.");
     };
-}
+};
 
 function triangleArea(side1, side2, side3) {
     validateAsTriangleSide(side1, side2, side3);
