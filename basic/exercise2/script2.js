@@ -31,4 +31,4 @@ function triangleArea(side1, side2, side3) {
     return triangleAreaMath;
 };
 
-document.getElementById("triangle").innerHTML = triangleArea(5, 6, 17);
+document.getElementById("triangle").innerHTML = triangleArea(5, 6, 7);
