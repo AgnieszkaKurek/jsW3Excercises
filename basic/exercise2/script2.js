@@ -8,15 +8,15 @@ function validateSide(side) {
         throw new Error("All sides should be bigger than 0");
     };
 };
-function validateLengthSide(propablyLongestSide, propablyShortestSide1, propablyShortestSide2) {
+function validateAsTriangleSide(propablyLongestSide, propablyShortestSide1, propablyShortestSide2) {
     if (propablyLongestSide > propablyShortestSide1 + propablyShortestSide2) {
         throw new Error("One side should be smaller than sum of two other sides");
     };
 }
 function triangleArea(side1, side2, side3) {
-    validateLengthSide(side1, side2, side3);
-    validateLengthSide(side2, side1, side3);
-    validateLengthSide(side3, side2, side1);
+    validateAsTriangleSide(side1, side2, side3);
+    validateAsTriangleSide(side2, side1, side3);
+    validateAsTriangleSide(side3, side2, side1);
     validateSide(side1);
     validateSide(side2);
     validateSide(side3);
