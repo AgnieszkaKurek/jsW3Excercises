@@ -1,10 +1,10 @@
 'use strict';
 
-var string = document.getElementById("inscription").innerHTML;
+var text = document.getElementById("textAnimation").innerHTML;
 var characters = string.split("");
 setInterval(function () {
     var firstCharacter = characters.shift();
     characters.push(firstCharacter);
-    document.getElementById("inscription").innerHTML = characters.join("");
+    document.getElementById("textAnimation").innerHTML = characters.join("");
 }, 500);
 
