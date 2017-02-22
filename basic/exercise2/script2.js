@@ -1,6 +1,7 @@
 'use strict';
 
 function validateSide(side) {
+
     if (isNaN(side)) {
         throw new TypeError("All sides should be number");
     };
@@ -10,6 +11,15 @@ function validateSide(side) {
 };
 
 function triangleArea(side1, side2, side3) {
+    if (side1 > side2 + side3) {
+        throw new Error("One side should be smaller than sum of two consecutive sides")
+    };
+    if (side2 > side1 + side3) {
+        throw new Error("One side should be smaller than sum of two consecutive sides")
+    };
+    if (side3 > side2 + side1) {
+        throw new Error("One side should be smaller than sum of two consecutive sides")
+    };
     validateSide(side1);
     validateSide(side2);
     validateSide(side3);
@@ -21,4 +31,4 @@ function triangleArea(side1, side2, side3) {
     return triangleAreaMath;
 };
 
-document.getElementById("triangle").innerHTML = triangleArea(5, 6, 7);
+document.getElementById("triangle").innerHTML = triangleArea(5, 6, 17);
