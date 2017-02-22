@@ -1,6 +1,9 @@
 'use strict';
 
 function validateSide(side) {
+    if (isNaN(side)) {
+        throw new TypeError("All sides should be number");
+    };
     if (side <= 0) {
         throw new Error("All sides should be bigger than 0");
     };
