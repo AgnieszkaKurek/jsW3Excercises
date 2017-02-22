@@ -9,8 +9,8 @@ function validateSide(side) {
     };
 };
 
-function validateAsTriangleSides(propablyLongestSide, propablyShortestSide1, propablyShortestSide2) {
-    if (propablyLongestSide > propablyShortestSide1 + propablyShortestSide2) {
+function validateAsTriangleSides(propablyLongestSide, propablyShorterSide1, propablyShorterSide2) {
+    if (propablyLongestSide >= propablyShorterSide1 + propablyShorterSide2) {
         throw new Error("One side should be smaller than sum of two other sides.");
     };
 };
