@@ -2,14 +2,23 @@
 
 function validateSide(side) {
     if (isNaN(side)) {
-        throw new TypeError("All sides should be number");
+        throw new TypeError("All sides should be number.");
     };
     if (side <= 0) {
-        throw new Error("All sides should be bigger than 0");
+        throw new Error("All sides should be bigger than 0.");
+    };
+};
+
+function validateAsTriangleSides(propablyLongestSide, propablyShorterSide1, propablyShorterSide2) {
+    if (propablyLongestSide >= propablyShorterSide1 + propablyShorterSide2) {
+        throw new Error("One side should be smaller than sum of two other sides.");
     };
 };
 
 function triangleArea(side1, side2, side3) {
+    validateAsTriangleSide(side1, side2, side3);
+    validateAsTriangleSide(side2, side1, side3);
+    validateAsTriangleSide(side3, side2, side1);
     validateSide(side1);
     validateSide(side2);
     validateSide(side3);
