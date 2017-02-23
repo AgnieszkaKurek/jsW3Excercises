@@ -16,12 +16,12 @@ function validateAsTriangleSides(propablyLongestSide, propablyShorterSide1, prop
 };
 
 function triangleArea(side1, side2, side3) {
-    validateAsTriangleSides(side1, side2, side3);
-    validateAsTriangleSides(side2, side1, side3);
-    validateAsTriangleSides(side3, side2, side1);
     validateSide(side1);
     validateSide(side2);
     validateSide(side3);
+    validateAsTriangleSides(side1, side2, side3);
+    validateAsTriangleSides(side2, side1, side3);
+    validateAsTriangleSides(side3, side2, side1);
     var trianglePerimeter = (side1 + side2 + side3) / 2;
     var trianglePerSide1 = trianglePerimeter - side1;
     var trianglePerSide2 = trianglePerimeter - side2;
