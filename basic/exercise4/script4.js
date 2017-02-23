@@ -1,7 +1,7 @@
 'use strict';
 
 function isLeapYear(year) {
-    return ((year % 4 === 0) && (year % 100 != 0)) || (year % 400 === 0);
+    return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
 };
 
 document.getElementById("leapYear1").innerHTML = isLeapYear(1986);
