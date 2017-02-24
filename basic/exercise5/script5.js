@@ -1,12 +1,11 @@
 'use strict';
-
-function firstSunday() {
-    for (var year = 2014; year <= 2050; year++) {
+function firstSunday (yearX, yearY){
+    for (var year = yearX; year <= yearY;  year++) {
         var d = new Date(year, 0, 1);
-        if (d.getDay() === 0) {
-            document.getElementById("newYear").innerHTML = `The first day of ${year} is a Sunday.`
-        };
+         if (d.getDay() === 0){
+           console.log(`The first day of ${year} is a Sunday.`);
+         };
     };
 };
 
-firstSunday();
+firstSunday(2014, 2050);
