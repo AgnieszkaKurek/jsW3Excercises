@@ -1,14 +1,13 @@
 'use strict';
 
-function firstSunday(startYear, endYear) {
+function findYearBeginASunday(startYear, endYear) {
     for (var year = startYear; year <= endYear; year++) {
         var d = new Date(year, 0, 1);
         if (d.getDay() === 0) {
-            return year;
+          return year;
         };
     };
 };
 
-console.log(`The first day of ${year} is a Sunday`);
-firstSunday(2014, 2050);
-
+var year = findYearBeginASunday(2014, 2050);
+console.log(`The first day of ${year} is a Sunday`); 
