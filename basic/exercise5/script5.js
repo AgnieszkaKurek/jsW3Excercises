@@ -1,4 +1,5 @@
 'use strict';
+
 function firstSunday (yearX, yearY){
     for (var year = yearX; year <= yearY;  year++) {
         var d = new Date(year, 0, 1);
