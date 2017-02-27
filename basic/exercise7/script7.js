@@ -1,17 +1,17 @@
 'use strict';
 
-function calculateDaysUntilToNextChristmas() {
-
-    var oneDay = 1000 * 60 * 60 * 24;
-    var today = new Date;
-    var Christmas = new Date(today.getFullYear(), 11, 25);
-    if (today.getMonth() == 11 && today.getDate() > 25) {
-        Christmas.setFullYear(Christmas.getFullYear() + 1)
+function getNumberOfDaysUntilNextChristmas(date) {
+    var oneDayInMiliseconds = 1000 * 60 * 60 * 24;
+    var myDate = new Date;
+    var christmasDate = new Date(myDate.getFullYear(), 11, 25);
+    if (myDate.getMonth() === 11 && myDate.getDate() > 25) {
+        christmasDate.setFullYear(christmasDate.getFullYear() + 1)
     };
-    var timeUntilChristmas = Math.ceil((Christmas.getTime()-today.getTime())/(oneDay));
-    return timeUntilChristmas;
+    var timeUntilChristmas = Math.ceil((christmasDate.getTime() - myDate.getTime()) / (oneDayInMiliseconds));
+    var dayUntilChristmas = `There are ${timeUntilChristmas} days to Christmas.`;
+    return dayUntilChristmas;
 };
 
-var timeUntilChristmas = calculateDaysUntilToNextChristmas();
-console.log(`There are ${timeUntilChristmas} days to Christmas.`);
-document.getElementById("timeToNextChristmas").innerHTML = `There are ${timeUntilChristmas} days to Christmas.`;
+var dayUntilChristmas = getNumberOfDaysUntilNextChristmas();
+console.log(dayUntilChristmas);
+document.getElementById("timeToNextChristmas").innerHTML = dayUntilChristmas;
