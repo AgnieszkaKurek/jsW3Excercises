@@ -8,11 +8,10 @@ function calculateDaysUntilToNextChristmas() {
     if (today.getMonth() == 11 && today.getDate() > 25) {
         Christmas.setFullYear(Christmas.getFullYear() + 1)
     };
-    //var dateNextChristmas = Math.ceil(Christmas.getDate() - today.getDate());
     var timeUntilChristmas = Math.ceil((Christmas.getTime()-today.getTime())/(oneDay));
     return timeUntilChristmas;
 };
 
 var timeUntilChristmas = calculateDaysUntilToNextChristmas();
-console.log(`There are ${timeUntilChristmas} days to Christmas`);
-document.getElementById("timeToNextChristmas").innerHTML = `There are ${timeUntilChristmas} days to Christmas`;
+console.log(`There are ${timeUntilChristmas} days to Christmas.`);
+document.getElementById("timeToNextChristmas").innerHTML = `There are ${timeUntilChristmas} days to Christmas.`;
