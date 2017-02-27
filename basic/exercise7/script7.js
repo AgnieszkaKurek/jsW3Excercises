@@ -1,8 +1,8 @@
 'use strict';
 
-function getNumberOfDaysUntilNextChristmas(date) {
+function getNumberOfDaysUntilNextChristmas() {
     var oneDayInMiliseconds = 1000 * 60 * 60 * 24;
-    var myDate = new Date;
+    var myDate = new Date();
     var christmasDate = new Date(myDate.getFullYear(), 11, 25);
     if (myDate.getMonth() === 11 && myDate.getDate() > 25) {
         christmasDate.setFullYear(christmasDate.getFullYear() + 1)
