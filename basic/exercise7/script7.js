@@ -14,8 +14,8 @@ function getNumberOfDaysUntilNextChristmas(date) {
 
 function displayNumberOfDaysUntilNextChristmas(date, id) {
     var numberOfDaysUntilNextChristmas = getNumberOfDaysUntilNextChristmas(date);
-    var nuberOfDaysFromDateToNextChrismas = `From ${date} is ${numberOfDaysUntilNextChristmas} days to next Christmas.`;
-    document.getElementById(id).innerHTML = nuberOfDaysFromDateToNextChrismas;
+    var informationAboutNuberOfDaysFromDateToNextChrismas = `From ${date} is ${numberOfDaysUntilNextChristmas} days to next Christmas.`;
+    document.getElementById(id).innerHTML = informationAboutNuberOfDaysFromDateToNextChrismas;
 };
 
 displayNumberOfDaysUntilNextChristmas(new Date(), "timeToNextChristmas1");
