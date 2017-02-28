@@ -6,15 +6,16 @@ function getNumberOfDaysUntilNextChristmas(date) {
     var firstChristmasDays = 25;
     var christmasDate = new Date(date.getFullYear(), decemberIndex, firstChristmasDays);
     if (date.getMonth() === decemberIndex && date.getDate() > firstChristmasDays) {
-        christmasDate.setFullYear(christmasDate.getFullYear() + 1)
+        christmasDate.setFullYear(christmasDate.getFullYear() + 1);
     };
-    var timeUntilChristmas = Math.ceil((christmasDate.getTime() - date.getTime()) / (oneDayInMiliseconds));
+    var timeUntilChristmas = Math.ceil((christmasDate.getTime() - date.getTime()) / oneDayInMiliseconds);
     return timeUntilChristmas;
 };
 
 function displayNumberOfDaysUntilNextChristmas(date, id) {
-    var chdate = getNumberOfDaysUntilNextChristmas(date);
-    document.getElementById(id).innerHTML = chdate;
+    var numberOfDaysUntilNextChristmas = getNumberOfDaysUntilNextChristmas(date);
+    var nuberOfDaysFromDateToNextChrismas = `From ${date} is ${numberOfDaysUntilNextChristmas} days to next Christmas.`;
+    document.getElementById(id).innerHTML = nuberOfDaysFromDateToNextChrismas;
 };
 
 displayNumberOfDaysUntilNextChristmas(new Date(), "timeToNextChristmas1");
