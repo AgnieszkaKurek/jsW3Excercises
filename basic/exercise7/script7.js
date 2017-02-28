@@ -12,10 +12,23 @@ function getNumberOfDaysUntilNextChristmas(date) {
     return timeUntilChristmas;
 };
 
-function displayNumberOfDaysUntilNextChristmas(date, id) {
+function formatAsTwoDigits(timeUnit) {
+    return (timeUnit < 10) ? `0${timeUnit}` : timeUnit;
+};
+
+function formatDate(date) {
+    var month = formatAsTwoDigits(date.getMonth());
+    var day = formatAsTwoDigits(date.getDay());
+    var year = date.getFullYear();
+    var shortDate = `${month} ${day} ${year}`;
+    return shortDate;
+};
+
+function displayNumberOfDaysUntilNextChristmas(date, id, formatFunction) {
     var numberOfDaysUntilNextChristmas = getNumberOfDaysUntilNextChristmas(date);
-    var nuberOfDaysFromDateToNextChrismas = `From ${date} is ${numberOfDaysUntilNextChristmas} days to next Christmas.`;
-    document.getElementById(id).innerHTML = nuberOfDaysFromDateToNextChrismas;
+    var shortDate = formatDate(date);
+    var informationAboutNumberOfDaysUntilNextChristmas = `From ${shortDate} is ${numberOfDaysUntilNextChristmas} days to next Christmas.`;
+    document.getElementById(id).innerHTML = informationAboutNumberOfDaysUntilNextChristmas;
 };
 
 displayNumberOfDaysUntilNextChristmas(new Date(), "timeToNextChristmas1");
