@@ -12,10 +12,11 @@ function getNumberOfDaysUntilNextChristmas(date) {
     return timeUntilChristmas;
 };
 
-var timeUntilChristmas = getNumberOfDaysUntilNextChristmas(new Date());
-document.getElementById("timeToNextChristmas1").innerHTML = `There are ${timeUntilChristmas} days to Christmas.`;
-var timeUntilChristmas = getNumberOfDaysUntilNextChristmas(new Date(2017, 11, 1));
-document.getElementById("timeToNextChristmas2").innerHTML = `There are ${timeUntilChristmas} days to Christmas `;
-var timeUntilChristmas = getNumberOfDaysUntilNextChristmas(new Date(2017, 11, 28));
-document.getElementById("timeToNextChristmas3").innerHTML = `There are ${timeUntilChristmas} days to Christmas `;
+function displayNumberOfDaysUntilNextChristmas(date, id) {
+    var chdate = getNumberOfDaysUntilNextChristmas(date);
+    document.getElementById(id).innerHTML = chdate;
+};
 
+displayNumberOfDaysUntilNextChristmas(new Date(), "timeToNextChristmas1");
+displayNumberOfDaysUntilNextChristmas(new Date(2017, 11, 1), "timeToNextChristmas2");
+displayNumberOfDaysUntilNextChristmas(new Date(2017, 11, 28), "timeToNextChristmas3");
