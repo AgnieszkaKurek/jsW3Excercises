@@ -1,17 +1,21 @@
 'use strict';
 
-function getNumberOfDaysUntilNextChristmas() {
+function getNumberOfDaysUntilNextChristmas(date) {
     var oneDayInMiliseconds = 1000 * 60 * 60 * 24;
-    var myDate = new Date();
-    var christmasDate = new Date(myDate.getFullYear(), 11, 25);
-    if (myDate.getMonth() === 11 && myDate.getDate() > 25) {
+    var decemberIndex = 11;
+    var firstChristmasDays = 25;
+    var christmasDate = new Date(date.getFullYear(), decemberIndex, firstChristmasDays);
+    if (date.getMonth() === decemberIndex && date.getDate() > firstChristmasDays) {
         christmasDate.setFullYear(christmasDate.getFullYear() + 1)
     };
-    var timeUntilChristmas = Math.ceil((christmasDate.getTime() - myDate.getTime()) / (oneDayInMiliseconds));
-    var dayUntilChristmas = `There are ${timeUntilChristmas} days to Christmas.`;
-    return dayUntilChristmas;
+    var timeUntilChristmas = Math.ceil((christmasDate.getTime() - date.getTime()) / (oneDayInMiliseconds));
+    return timeUntilChristmas;
 };
 
-var dayUntilChristmas = getNumberOfDaysUntilNextChristmas();
-console.log(dayUntilChristmas);
-document.getElementById("timeToNextChristmas").innerHTML = dayUntilChristmas;
+var timeUntilChristmas = getNumberOfDaysUntilNextChristmas(new Date());
+document.getElementById("timeToNextChristmas1").innerHTML = `There are ${timeUntilChristmas} days to Christmas.`;
+var timeUntilChristmas = getNumberOfDaysUntilNextChristmas(new Date(2017, 11, 1));
+document.getElementById("timeToNextChristmas2").innerHTML = `There are ${timeUntilChristmas} days to Christmas `;
+var timeUntilChristmas = getNumberOfDaysUntilNextChristmas(new Date(2017, 11, 28));
+document.getElementById("timeToNextChristmas3").innerHTML = `There are ${timeUntilChristmas} days to Christmas `;
+
