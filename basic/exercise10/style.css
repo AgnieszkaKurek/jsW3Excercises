@@ -1,0 +1,21 @@
+body{
+   padding: 20px;
+   background-color: #bdbdbd;
+};
+
+h1{
+    text-align: center;
+}
+
+.input {
+    margin-left: 30px;
+    background-color: #ccccff;
+}
+
+.button {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #ccccff;
+    border: 1px solid #330033;
+    border-radius: 8px;
+}
