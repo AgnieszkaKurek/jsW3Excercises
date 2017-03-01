@@ -1,13 +1,13 @@
 'use strict';
 
 function calculateMultiplication() {
-    Number1 = document.getElementById("Number1").value;
-    Number2 = document.getElementById("Number2").value;
-    document.getElementById("result").innerHTML = Number1 * Number2;
+    var number1 = document.getElementById("number1").value;
+    var number2 = document.getElementById("number2").value;
+    document.getElementById("result").innerHTML = number1 * number2;
 };
 
 function calculateDivide() {
-    Number1 = document.getElementById("Number1").value;
-    Number2 = document.getElementById("Number2").value;
-    document.getElementById("result").innerHTML = Number1 / Number2;
+    var number1 = document.getElementById("number1").value;
+    var umber2 = document.getElementById("number2").value;
+    document.getElementById("result").innerHTML = number1 / number2;
 };

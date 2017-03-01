@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="style.css" />
     <title>excercise10</title>
 </head>
-<body>
-    <h1>Multiplication and division</h1>
-    <div> Number 1:<input type="text" id="Number1" /> Number 2: <input type="text" id="Number2" /></div>
-    </br>
-    <div>Get Result: <input class="input" type="text" id="result" /> </div>
-    </br>
-    <input class="button" type="button" value="multiply" onclick="calculateMultiplication()">
-    <input class="button" type="button" value="division" onclick="calculateDivide()">
 
-    <script src="script.js"></script>
+<body>
+     <script src="script.js"></script>
+    <h1>Multiplication and division</h1>
+    <div> Number 1:<input type="text" id="number1" /> 
+          Number 2: <input type="text" id="number2" /></div>
+    </br>
+    <div>Get Result:<input type="text" name="result" /> </div>
+    </br>
+    <input class="button" type="button" value="multiply" onclick=calculateMultiplication() />
+    <input class="button" type="button" value="division" onclick="calculateDivide()" />
+
 </body>
+
 </html>
