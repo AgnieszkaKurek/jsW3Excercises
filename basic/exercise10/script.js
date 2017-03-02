@@ -24,5 +24,5 @@ function calculateMultiplication() {
 };
 
 function calculateDivision() {
-    performCalculate(divide)
+    performCalculate(divide);
 };
