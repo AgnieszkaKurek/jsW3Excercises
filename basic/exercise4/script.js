@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
 function validateSide(side) {
     if (isNaN(side)) {
         throw new TypeError("All sides should be number.");
-    };
+    }
     if (side <= 0) {
         throw new Error("All sides should be bigger than 0.");
-    };
-};
+    }
+}
 
 function validateAsTriangleSides(propablyLongestSide, propablyShorterSide1, propablyShorterSide2) {
     if (propablyLongestSide >= propablyShorterSide1 + propablyShorterSide2) {
         throw new Error("One side should be smaller than sum of two other sides.");
-    };
-};
+    }
+}
 
 function triangleArea(side1, side2, side3) {
     validateSide(side1);
@@ -28,6 +28,6 @@ function triangleArea(side1, side2, side3) {
     var trianglePerSide3 = trianglePerimeter - side3;
     var triangleAreaMath = Math.sqrt(trianglePerimeter * trianglePerSide1 * trianglePerSide2 * trianglePerSide3);
     return triangleAreaMath;
-};
+}
 
 document.getElementById("triangle").innerHTML = triangleArea(5, 6, 7);

@@ -1,10 +1,14 @@
-body{
+body {
    padding: 20px;
    background-color: #bdbdbd;
 };
 
-h1{
+h1 {
     text-align: center;
+}
+.tag {
+    display: inline-block;
+    margin-left: 40px;
 }
 
 .input {

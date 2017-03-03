@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var text = document.getElementById("textAnimation").innerHTML;
 var characters = text.split("");
