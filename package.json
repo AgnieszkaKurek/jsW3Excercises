@@ -1,0 +1,16 @@
+{
+  "name": "jsw3exercises",
+  "version": "1.0.0",
+  "description": "JavaScript Exercises.\r  Exercises are  the: http://www.w3resource.com/javascript-exercises/",
+  "main": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgnieszkaKurek/jsW3Excercises.git"
+  },
+  "author": "Agnieszka Kurek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AgnieszkaKurek/jsW3Excercises/issues"
+  },
+  "homepage": "https://github.com/AgnieszkaKurek/jsW3Excercises#readme"
+}
