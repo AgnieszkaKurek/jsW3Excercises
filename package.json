@@ -12,5 +12,8 @@
   "bugs": {
     "url": "https://github.com/AgnieszkaKurek/jsW3Excercises/issues"
   },
-  "homepage": "https://github.com/AgnieszkaKurek/jsW3Excercises#readme"
+  "homepage": "https://github.com/AgnieszkaKurek/jsW3Excercises#readme",
+  "devDependencies": {
+    "eslint": "^3.16.1"
+  }
 }
