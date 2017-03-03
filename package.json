@@ -13,12 +13,18 @@
     "url": "https://github.com/AgnieszkaKurek/jsW3Excercises/issues"
   },
   "homepage": "https://github.com/AgnieszkaKurek/jsW3Excercises#readme",
+  "scripts": {
+    "postinstall": "typings install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run"
+  },
   "devDependencies": {
     "eslint": "^3.16.1",
     "htmlhint": "^0.9.13",
     "jasmine-core": "^2.5.2",
     "karma": "^1.5.0",
     "karma-chrome-launcher": "^2.0.0",
-    "karma-jasmine": "^1.1.0"
+    "karma-jasmine": "^1.1.0",
+    "typings": "^2.1.0"
   }
 }
