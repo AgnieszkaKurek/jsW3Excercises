@@ -1,15 +1,15 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 
-describe("Checking if  degrees Celsius ", function(){
-    it("is degrees Fahrenheit", function(){
-        var temperatureInDegreesFahrenheit =  convertTemperaturesFromCelsiusToFahrenheit(degreesCelsius);
-        expect(temperatureInDegreesFahrenheit).toBeTruthy();
+describe("10 degrees Celsius" , function(){
+    it("is 50 degrees Fahrenheit", function(){
+        var degreesFahrenheit =  convertTemperatureFromCelsiusToFahrenheit(10);
+        expect(degreesFahrenheit).toEqual(50);
     });
 });
 
-describe("Checking if  degrees Fahrenheit ", function(){
-    it("is degrees Celsius", function(){
-        var temperatureInDegreesCelsius =  convertTemperaturesFromFahrenheitToCelsius(degreesFahrenheit);
-        expect(temperatureInDegreesCelsius).toBeTruthy();
+describe("60 degrees Fahrenheit ", function(){
+    it("is 15.56 degrees Celsius", function(){
+        var degreesCelsius =  convertTemperaturesFromFahrenheitToCelsius(60);
+        expect(degreesCelsius).toEqual(15,56);
     });
 });
