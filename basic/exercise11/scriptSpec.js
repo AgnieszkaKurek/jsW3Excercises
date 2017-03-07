@@ -1,6 +1,6 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals convertTemperatureFromCelsiusToFahrenheit*/
-/*globals convertTemperaturesFromFahrenheitToCelsius*/
+/*globals convertTemperatureFromFahrenheitToCelsius*/
 
 describe("Convert temperature:", function () {
     it("0 degrees Celsius is 32 degrees Fahrenheit", function () {
@@ -15,11 +15,11 @@ describe("Convert temperature:", function () {
 
 describe("Convert temperature:", function () {
     it("0 degrees Fahrenheit is -17.777777778 degrees Celsius.", function () {
-        var degreesCelsius = convertTemperaturesFromFahrenheitToCelsius(0);
+        var degreesCelsius = convertTemperatureFromFahrenheitToCelsius(0);
         expect(degreesCelsius).toEqual(-17.777777778);
     });
     it("60 degrees Fahrenheit is 15.555555556 degrees Celsius.", function () {
-        var degreesCelsius = convertTemperaturesFromFahrenheitToCelsius(60);
+        var degreesCelsius = convertTemperatureFromFahrenheitToCelsius(60);
         expect(degreesCelsius).toEqual(15.555555556);
     });
 });
