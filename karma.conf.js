@@ -16,7 +16,9 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'basic/exercise6/script.js',
-      'basic/exercise6/scriptSpec.js'
+      'basic/exercise6/scriptSpec.js',
+      'basic/exercise11/script.js',
+      'basic/exercise11/scriptSpec.js'
     ],
 
 
