@@ -7,7 +7,5 @@ function convertTemperatureFromCelsiusToFahrenheit(degreesCelsius) {
 
 function convertTemperatureFromFahrenheitToCelsius(degreesFahrenheit) {
     var degreesCelsius = (degreesFahrenheit - 32) * 5 / 9;
-    //return degreesCelsius;
-    var fixedDegreesCelsius = degreesCelsius.toFixed(2);
-    return fixedDegreesCelsius;
+    return degreesCelsius;
 }
