@@ -1,15 +1,25 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
+/*globals convertTemperatureFromCelsiusToFahrenheit*/
+/*globals convertTemperaturesFromFahrenheitToCelsius*/
 
-describe(" Degrees Celsius" , function(){
-    it("is convert to degrees Fahrenheit", function(){
-        var degreesFahrenheit =  convertTemperatureFromCelsiusToFahrenheit(10);
-        expect(degreesFahrenheit).toEqual(50);
+describe("Convert temperature:", function () {
+    it("0 degrees Celsius is 32 degrees Fahrenheit", function () {
+        var degreesFahrenheit = convertTemperatureFromCelsiusToFahrenheit(0);
+        expect(degreesFahrenheit).toBe(32);
+    });
+    it("10 degrees Celsius is 50 degrees Fahrenheit", function () {
+        var degreesFahrenheit = convertTemperatureFromCelsiusToFahrenheit(10);
+        expect(degreesFahrenheit).toBe(50);
     });
 });
 
-describe(" Degrees Fahrenheit ", function(){
-    it("is convert to degrees Celsius", function(){
-        var degreesCelsius =  convertTemperaturesFromFahrenheitToCelsius(60);
-        expect(degreesCelsius).toEqual(15.56);
+describe("Convert temperature:", function () {
+    it("0 degrees Fahrenheit is -17.777777778 degrees Celsius.", function () {
+        var degreesCelsius = convertTemperaturesFromFahrenheitToCelsius(0);
+        expect(degreesCelsius).toEqual(-17.777777778);
+    });
+    it("60 degrees Fahrenheit is 15.555555556 degrees Celsius.", function () {
+        var degreesCelsius = convertTemperaturesFromFahrenheitToCelsius(60);
+        expect(degreesCelsius).toEqual(15.555555556);
     });
 });
