@@ -2,7 +2,7 @@
 /*globals convertTemperatureFromCelsiusToFahrenheit*/
 /*globals convertTemperatureFromFahrenheitToCelsius*/
 
-describe("Convert temperature:", function () {
+describe("Convert temperature from Celsius to Fahrenheit:", function () {
     it("0 degrees Celsius is 32 degrees Fahrenheit", function () {
         var degreesFahrenheit = convertTemperatureFromCelsiusToFahrenheit(0);
         expect(degreesFahrenheit).toBe(32);
@@ -13,7 +13,7 @@ describe("Convert temperature:", function () {
     });
 });
 
-describe("Convert temperature:", function () {
+describe("Convert temperature from Fahrenheit to Celsius:", function () {
     it("0 degrees Fahrenheit is -17.777777778 degrees Celsius.", function () {
         var degreesCelsius = convertTemperatureFromFahrenheitToCelsius(0);
         expect(degreesCelsius).toBe(-17.777777778);
