@@ -32,7 +32,6 @@ describe("Conversion does not lose precision when it is converted and converted 
     it("converting 0 degrees Fahrenheit to Celcius and back to Fahrenheit gives 0 Fahrenheit again", function(){
         var degreesCelsius = convertTemperatureFromFahrenheitToCelsius(0);
         var degreesFahrenheit = convertTemperatureFromCelsiusToFahrenheit(degreesCelsius);
-        var fixedDegreesFahrenheit = degreesFahrenheit.toFixed(2);
-        expect(fixedDegreesFahrenheit).toBe("0.00");
+        expect(degreesFahrenheit).toBe(0);
     });
 });
