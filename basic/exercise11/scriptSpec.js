@@ -22,22 +22,19 @@ describe("Convert temperature from Fahrenheit to Celsius:", function () {
         expect(fixedDegreesCelsius).toBe("-17.78");
     });
     it("60 degrees Fahrenheit is 15.56 degrees Celsius.", function () {
-        var degreesCelsius  = convertTemperatureFromFahrenheitToCelsius(60);
+        var degreesCelsius = convertTemperatureFromFahrenheitToCelsius(60);
         var fixedDegreesCelsius = degreesCelsius.toFixed(2);
         expect(fixedDegreesCelsius).toBe("15.56");
     });
 });
 
-describe("Conversion does not lose precision when it is converted and converted back:", function () {  
-    it("converting 0 degrees Fahrenheit to Celcius and back to Fahrenheit gives 0 Fahrenheit again", function(){
+describe("Conversion does not lose precision when it is converted and converted back:", function () {
+    it("converting 0 degrees Fahrenheit to Celcius and back to Fahrenheit gives 0 Fahrenheit again", function () {
         var degreesCelsius = convertTemperatureFromFahrenheitToCelsius(0);
         var degreesFahrenheit = convertTemperatureFromCelsiusToFahrenheit(degreesCelsius);
         expect(degreesFahrenheit).toBe(0);
     });
-});
-
-describe("Conversion does not lose precision when it is converted and converted back:", function () {  
-    it("converting 0 degrees Celcius to Fahrenheit and back to Celcius gives 0 Celcius again", function(){
+    it("converting 0 degrees Celcius to Fahrenheit and back to Celcius gives 0 Celcius again", function () {
         var degreesFahrenheit = convertTemperatureFromCelsiusToFahrenheit(0);
         var degreesCelsius = convertTemperatureFromFahrenheitToCelsius(degreesFahrenheit);
         expect(degreesCelsius).toBe(0);
