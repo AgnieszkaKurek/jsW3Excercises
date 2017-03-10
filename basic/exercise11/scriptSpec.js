@@ -27,3 +27,11 @@ describe("Convert temperature from Fahrenheit to Celsius:", function () {
         expect(fixedDegreesCelsius).toBe("15.56");
     });
 });
+
+describe("Conversion does not lose precision when it is converted and converted back:", function () {  
+    it("converting 0 degrees Fahrenheit to Celcius and back to Fahrenheit gives 0 Fahrenheit again", function(){
+        var degreesCelsius = convertTemperatureFromFahrenheitToCelsius(0);
+        var degreesFahrenheit = convertTemperatureFromCelsiusToFahrenheit(degreesCelsius);
+        expect(degreesFahrenheit).toBe(0);
+    });
+});
