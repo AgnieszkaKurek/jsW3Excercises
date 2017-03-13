@@ -10,4 +10,12 @@ describe("Revert number", function () {
         var reverseNumber = revertNumber(12345);
         expect(reverseNumber).toBe(54321);
     });
+     it("from 1 to 1", function () {
+        var reverseNumber = revertNumber(1);
+        expect(reverseNumber).toBe(1);
+    });
+    it("from 120 to 21", function () {
+        var reverseNumber = revertNumber(120);
+        expect(reverseNumber).toBe(21);
+    });
 });
