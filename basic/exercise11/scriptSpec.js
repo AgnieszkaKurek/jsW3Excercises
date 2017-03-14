@@ -28,4 +28,15 @@ describe("Convert temperature from Fahrenheit to Celsius:", function () {
     });
 });
 
-
+describe("Convert temperature beck from Celsius to Fahrenheit:", function () {
+    it("back temperature from -17.78 degrees Celsius to 0 degrees Fahrenheit", function () {
+        var degreesCelsius = convertTemperatureFromCelsiusToFahrenheit(-17.78);
+        var fixedBackToDegreesCelsius = degreesCelsius.toFixed(2);
+        expect(fixedBackToDegreesCelsius).toBe("0.00");
+    });
+    it("back temperature from 15.56 degrees Celsius to 0 degrees Fahrenheit", function () {
+        var degreesCelsius = convertTemperatureFromCelsiusToFahrenheit(15.56);
+        var fixedBackToDegeesCelsius = degreesCelsius.toFixed(2);
+        expect(fixedBackToDegeesCelsius).toBe("60.0");
+    });
+});
