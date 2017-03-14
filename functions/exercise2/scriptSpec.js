@@ -1,17 +1,25 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals checkPalindrome*/
 
-describe("Check if word is palindrome", function () {
-    it("tenet read from the back is tenet", function () {
+describe("Checking if word is palindrome: ", function(){
+    it("word tenet is a palindrome", function(){
         var wordFromTheRear = checkPalindrome("tenet");
-        expect(wordFromTheRear).toBe("tenet");
-       });
-       it("civic read from the back is civic", function () {
+        expect(wordFromTheRear).toBeTruthy();
+    });
+    it("word kayak is a palindrome", function(){
         var wordFromTheRear = checkPalindrome("civic");
-        expect(wordFromTheRear).toBe("civic");
-       });
-       it("kayak read from the back is kayak", function () {
-        var wordFromTheRear = checkPalindrome("kayak");
-        expect(wordFromTheRear).toBe("kayak");
-       });
-}); 
+        expect(wordFromTheRear).toBeTruthy();
+    });    
+    it("word dog is a palindrome", function(){
+        var wordFromTheRear = checkPalindrome("dog");
+        expect(wordFromTheRear).toBeFalsy();
+    });     
+    it("that a is a palindrome", function(){
+        var wordFromTheRear = checkPalindrome("a");
+        expect(wordFromTheRear).toBeFalsy();
+    });     
+    it("that ' ' is a palindrome", function(){
+        var wordFromTheRear = checkPalindrome(" ");
+        expect(wordFromTheRear).toBeFalsy();
+    });     
+});
