@@ -2,38 +2,34 @@
 /*globals isPalindrome*/
 
 describe("Checking if word is palindrome: ", function () {
-    it("word tenet is a palindrome", function () {
-        var resultEntry = isPalindrome("tenet");
-        expect(resultEntry).toBeTruthy();
+    it("word 'tenet' is a palindrome", function () {
+        var palindrome = isPalindrome("tenet");
+        expect(palindrome).toBeTruthy();
     });
-    it("word dog is a palindrome", function () {
-        var resultEntry = isPalindrome("dog");
-        expect(resultEntry).toBeFalsy();
+    it("word dog isn't a palindrome", function () {
+        var palindrome = isPalindrome("dog");
+        expect(palindrome).toBeFalsy();
     });
-     it("word kayak is a palindrome", function () {
-        var resultEntry = isPalindrome("kayak ");
-        expect(resultEntry).toBeTruthy();
+    it("if after palidromem is spacia 'kayak ', it is palidrom too", function () {
+        var palindrome = isPalindrome("kayak ");
+        expect(palindrome).toBeTruthy();
     });
-    it("word kayak is a palindrome", function () {
-        var resultEntry = isPalindrome(" kayak");
-        expect(resultEntry).toBeTruthy();
+    it("if before palidromem is spacia ' kayak', it is palidrom too", function () {
+        var palindrome = isPalindrome(" kayak");
+        expect(palindrome).toBeTruthy();
     });
-    it("string kayak kayak is a palindrome", function () {
-        var resultEntry = isPalindrome("kayak kayak");
-        expect(resultEntry).toBeTruthy();
+    it("if between two palindromes is spacia 'kayak kayak', it is a palindrome too", function () {
+        var palindrome = isPalindrome("kayak kayak");
+        expect(palindrome).toBeTruthy();
     });
-
-    it("word dog is a palindrome", function () {
-        var resultEntry = isPalindrome("dog");
-        expect(resultEntry).toBeFalsy();
+    it("One letter, 'a' is palindrome", function () {
+        var palindrome = isPalindrome("a");
+        expect(palindrome).toBeTruthy();
     });
-    it("that a is a palindrome", function () {
-        var resutEntry = isPalindrome("a");
-        expect(resutEntry).toBeTruthy();
+    it("no letters, '' is not a palindrome", function () {
+        expect(function () { isPalindrome(""); }).toThrow("Parameter must contain at least one letter");
     });
-    it("is not palindrome", function () {
-       expect(function() {isPalindrome(""); } ).toThrow("Palindrome must contain at least one letter");
-        expect(function() {isPalindrome(" "); } ).toThrow("Palindrome must contain at least one letter");
+    it("space, ' ' is not a palidrom", function () {
+        expect(function () { isPalindrome(" "); }).toThrow("Parameter must contain at least one letter");
     });
-    
 });
