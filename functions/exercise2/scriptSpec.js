@@ -29,11 +29,11 @@ describe("Checking if word is palindrome: ", function () {
     it("if phrase has uppercase, they are treated as lowercase, so phrase 'eyE' is a palidrome", function () {
         var isPhrasePalindrome = isPalindrome("eyE");
         expect(isPhrasePalindrome).toBeTruthy();
-       }); 
-       it("if phrase consists of palidromes separated white spaces asymmetrically, like in phrase 'kayakkayak kayak', is itn't palidrome ", function () {
+    });
+    it("if phrase consists of palidromes separated white spaces asymmetrically, like in phrase 'kayakkayak kayak', is itn't palidrome ", function () {
         var isPhrasePalindrome = isPalindrome("kayakkayak kayak");
         expect(isPhrasePalindrome).toBeFalsy();
-       }); 
+    });
     it("One letter, 'a' is palindrome", function () {
         var isPhrasePalindrome = isPalindrome("a");
         expect(isPhrasePalindrome).toBeTruthy();
