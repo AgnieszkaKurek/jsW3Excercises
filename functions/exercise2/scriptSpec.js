@@ -3,15 +3,15 @@
 
 describe("Checking if word is palindrome: ", function () {
     it("phrase 'tenet' is a palindrome", function () {
-        var isPhreasePalindrome = isPhreasePalindrome("tenet");
+        var isPhreasePalindrome = isPalindrome("tenet");
         expect(isPhreasePalindrome).toBeTruthy();
     });
     it("phrase 'dog' isn't a palindrome", function () {
-        var isPhrasePalindrome = isPhrasePalindrome("dog");
+        var isPhrasePalindrome = isPalindrome("dog");
         expect(isPhrasePalindrome).toBeFalsy();
     });
     it("if after palidromem is space 'kayak ', it is palidrome too", function () {
-        var isPhrasePalindrome = isPhrasePalindrome("kayak ");
+        var isPhrasePalindrome = isPalindrome("kayak ");
         expect(isPhrasePalindrome).toBeTruthy();
     });
     it("if before palindrome is space ' kayak', it is palidrome too", function () {
@@ -23,7 +23,7 @@ describe("Checking if word is palindrome: ", function () {
         expect(isPhrasePalindrom).toBeTruthy();
     });
     it("phrase is composed of different palindromes separated white spaces, like 'kayak eye', is not palidrome", function () {
-        var isPhrasePalindrome = isPhrasePalindrome("kayak eye");
+        var isPhrasePalindrome = isPalindrome("kayak eye");
         expect(isPhrasePalindrome).toBeFalsy();
     });
     it("One letter, 'a' is palindrome", function () {
