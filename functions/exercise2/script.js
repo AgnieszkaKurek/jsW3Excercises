@@ -4,11 +4,11 @@ function isPalindrome(phrease) {
     var isPhreasePalindrome = phrease.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "");
     var counter = 0;
     if (isPhreasePalindrome === "") {
-         window.alert("Parameter must contain at least one letter - not use white space");
+        window.alert("Parameter must contain at least one letter - not use white space");
         throw (new Error("Parameter must contain at least one letter - not use white space"));
     }
     if (isPhreasePalindrome === " ") {
-         window.alert("Parameter must contain at least one letter - not use white space");
+        window.alert("Parameter must contain at least one letter - not use white space");
         throw (new Error("Parameter must contain at least one letter - not use white space"));
     }
 
@@ -22,11 +22,9 @@ function isPalindrome(phrease) {
         }
     }
     for (var x = 0; x < counter; x++) {
-
         if (isPhreasePalindrome[x] != isPhreasePalindrome.slice(-1 - x)[0]) {
             return false;
         }
     }
     return true;
-    
 }
