@@ -3,16 +3,16 @@
 
 describe("Checking if word is palindrome: ", function () {
     it("phrase 'tenet' is a palindrome", function () {
-        var isPalindrome = isPalindrome("tenet");
-        expect(isPalindrome).toBeTruthy();
+        var isPhreasePalindrome = isPhreasePalindrome("tenet");
+        expect(isPhreasePalindrome).toBeTruthy();
     });
     it("phrase 'dog' isn't a palindrome", function () {
-        var isPalindrome = isPalindrome("dog");
-        expect(isPalindrome).toBeFalsy();
+        var isPhrasePalindrome = isPhrasePalindrome("dog");
+        expect(isPhrasePalindrome).toBeFalsy();
     });
     it("if after palidromem is space 'kayak ', it is palidrome too", function () {
-        var isPalindrome = isPalindrome("kayak ");
-        expect(isPalindrome).toBeTruthy();
+        var isPhrasePalindrome = isPhrasePalindrome("kayak ");
+        expect(isPhrasePalindrome).toBeTruthy();
     });
     it("if before palindrome is space ' kayak', it is palidrome too", function () {
         var isPhrasePalindrom = isPalindrome(" kayak");
