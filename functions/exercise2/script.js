@@ -1,11 +1,10 @@
 "use strict";
 
 function isPalindrome(phrase) {
-var result1 = phrase.toLowerCase().trim();
-var  result = result1.split("").reverse().join("");
-if (result === "") {
+    var normalizedPhrase = phrase.toLowerCase().trim();
+    if (normalizedPhrase === "") {
         throw new Error("Parameter must contain at least one letter - not use white space");
     }
-    
-return result === result1;
+    var reversedNormalizedPhrase = normalizedPhrase.split("").reverse().join("");
+    return reversedNormalizedPhrase === normalizedPhrase;
 }
