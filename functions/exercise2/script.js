@@ -1,5 +1,4 @@
 "use strict";
-
 function isPalindrome(phrase) {
     var normalizedPhrase = phrase.toLowerCase().trim();
     if (normalizedPhrase === "") {
@@ -7,4 +6,10 @@ function isPalindrome(phrase) {
     }
     var reversedNormalizedPhrase = normalizedPhrase.split("").reverse().join("");
     return reversedNormalizedPhrase === normalizedPhrase;
+}
+
+function showResult() {
+    var phrase = document.getElementById("phrase").value;
+    var result = isPalindrome(phrase);
+    document.getElementById("result").value = result;
 }
