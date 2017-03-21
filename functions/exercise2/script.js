@@ -1,4 +1,5 @@
 "use strict";
+
 function isPalindrome(phrase) {
     var normalizedPhrase = phrase.toLowerCase().trim();
     if (normalizedPhrase === "") {
@@ -12,7 +13,8 @@ function showResult() {
     var phrase = document.getElementById("phrase").value;
     try {
         var result = isPalindrome(phrase);
-        document.getElementById("result").value = `Phrase is palindrome: Is ${result}`;
+        if (result === true) { document.getElementById("result").value = `${phrase} is palindrome :)`; }
+        if (result === false) { document.getElementById("result").value = `${phrase} isn't palindrome :(`; }
     }
     catch (exception) {
         document.getElementById("result").value = exception;
