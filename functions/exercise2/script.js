@@ -14,7 +14,7 @@ function showResult() {
         var result = isPalindrome(phrase);
         document.getElementById("result").value = `Phrase is palindrome: Is ${result}`;
     }
-    catch(exception){
+    catch (exception) {
         document.getElementById("result").value = exception;
     }
 }
