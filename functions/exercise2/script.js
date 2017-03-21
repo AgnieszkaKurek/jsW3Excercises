@@ -13,8 +13,9 @@ function showResult() {
     var phrase = document.getElementById("phrase").value;
     try {
         var result = isPalindrome(phrase);
-        if (result === true) { document.getElementById("result").value = `${phrase} is palindrome :)`; }
-        if (result === false) { document.getElementById("result").value = `${phrase} isn't palindrome :(`; }
+        if (result) {result = "is a palindrome";}
+        else {result = "isn't a palindrome ";}
+        document.getElementById("result").value = `${phrase} ${result}`;
     }
     catch (exception) {
         document.getElementById("result").value = exception;
