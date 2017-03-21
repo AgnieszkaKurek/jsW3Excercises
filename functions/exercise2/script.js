@@ -11,13 +11,13 @@ function isPalindrome(phrase) {
 
 function showResult() {
     var phrase = document.getElementById("phrase").value;
+    var resultElement = document.getElementById("result");
     try {
-        var result = isPalindrome(phrase);
-        if (result) {result = "is a palindrome";}
-        else {result = "isn't a palindrome ";}
-        document.getElementById("result").value = `${phrase} ${result}`;
+        var isPhrasePalindrome = isPalindrome(phrase);
+        var message = isPhrasePalindrome ? "is a palindrome" : "isn't a palindrome";
+        resultElement.value = `'${phrase}' ${message}`;
     }
     catch (exception) {
-        document.getElementById("result").value = exception;
+        resultElement.value = exception;
     }
 }
