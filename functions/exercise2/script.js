@@ -10,6 +10,11 @@ function isPalindrome(phrase) {
 
 function showResult() {
     var phrase = document.getElementById("phrase").value;
-    var result = isPalindrome(phrase);
-    document.getElementById("result").value = result;
+    try {
+        var result = isPalindrome(phrase);
+        document.getElementById("result").value = `Phrase is palindrome: Is ${result}`;
+    }
+    catch(exception){
+        document.getElementById("result").value = exception;
+    }
 }
