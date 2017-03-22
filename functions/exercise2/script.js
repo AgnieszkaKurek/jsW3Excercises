@@ -8,3 +8,16 @@ function isPalindrome(phrase) {
     var reversedNormalizedPhrase = normalizedPhrase.split("").reverse().join("");
     return reversedNormalizedPhrase === normalizedPhrase;
 }
+
+function showResult() {
+    var phrase = document.getElementById("phrase").value;
+    var resultElement = document.getElementById("result");
+    try {
+        var isPhrasePalindrome = isPalindrome(phrase);
+        var message = isPhrasePalindrome ? "is a palindrome" : "isn't a palindrome";
+        resultElement.value = `'${phrase}' ${message}`;
+    }
+    catch (exception) {
+        resultElement.value = exception;
+    }
+}
