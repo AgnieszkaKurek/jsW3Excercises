@@ -8,15 +8,15 @@ h1 {
     color: #330033;
 }
 
-.tag {
-    display: inline-block;
-    margin-left: 40px;
-}
+
 
 input {
     text-align: center;
     margin-left: 30px;
     background-color: #ccccff;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .resultStyle {
@@ -25,6 +25,7 @@ input {
     text-align: center;
     font-size: x-large;
     font-weight: bold;
+
 }
 
 .exceptionStyle {
@@ -34,11 +35,14 @@ input {
     font-size: xx-large;
     font-weight: bold;
     color: #ff0000;
-}
+}  
 
 button {
     margin-left: 50px;
     margin-right: 50px;
     background-color: #ccccff;
     border: 5px solid #330033;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
 }
