@@ -1,0 +1,44 @@
+body {
+   padding: 20px;
+   background-color: #bdbdbd;
+}
+
+h1 {
+    text-align: center;
+    color: #330033;
+}
+
+.tag {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+input {
+    text-align: center;
+    margin-left: 30px;
+    background-color: #ccccff;
+}
+
+.resultStyle {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.exceptionStyle {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+button {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #ccccff;
+    border: 5px solid #330033;
+}

@@ -16,8 +16,11 @@ function showResult() {
         var isPhrasePalindrome = isPalindrome(phrase);
         var message = isPhrasePalindrome ? "is a palindrome" : "isn't a palindrome";
         resultElement.value = `'${phrase}' ${message}`;
+        document.getElementById("result").classList.add("resultStyle");
+        resultElement.classList.remove("exceptionStyle");
     }
     catch (exception) {
         resultElement.value = exception;
+        resultElement.classList.add("exceptionStyle");
     }
 }
