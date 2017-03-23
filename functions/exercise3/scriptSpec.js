@@ -20,10 +20,10 @@ describe("Getting all substrings:", function () {
     }); 
     it("three characters have 6 substrings", function () {
         var substrings = getAllSubStringsOf("dog");
-        expect(substrings).toEqual("d", "do","dog","o","og","g");
+        expect(substrings).toEqual(["d", "do","dog","o","og","g"]);
     });
     it("four characters have 10 substrings", function () {
         var substrings = getAllSubStringsOf("home");
-        expect(substrings).toEqual("h","ho","hom","home","o","om","ome","m","me","e");
+        expect(substrings).toEqual(["h","ho","hom","home","o","om","ome","m","me","e"]);
     });
 });
