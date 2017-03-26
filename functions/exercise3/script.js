@@ -13,5 +13,9 @@ function getAllSubStringsOf(text) {
 function showSubstrings() {
     var text = document.getElementById("text").value;
     var substrings = getAllSubStringsOf(text);
-    document.getElementById("substrings").value = substrings;
+    var formattedSubstrings = "";
+    for (var i = 0; i < substrings.length; i++) {
+        formattedSubstrings += `<div>${i + 1} - ${substrings[i]}</div>`;
+    }
+    document.getElementById("substrings").innerHTML = formattedSubstrings;
 }
