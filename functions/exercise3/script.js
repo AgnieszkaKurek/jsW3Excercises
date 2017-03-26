@@ -8,10 +8,10 @@ function getAllSubStringsOf(text) {
         }
     }
     return substrings;
-} 
+}
 
-function showSubstrings(){
- var text = document.getElementById("text").value;
- var substrings = getAllSubStringsOf(text);
- document.getElementById("substrings").value = substrings;
+function showSubstrings() {
+    var text = document.getElementById("text").value;
+    var substrings = getAllSubStringsOf(text);
+    document.getElementById("substrings").value = substrings;
 }
