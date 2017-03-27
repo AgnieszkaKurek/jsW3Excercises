@@ -1,7 +1,6 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals returnStringAlphabeticalOrder */
 
-
 describe("Checking if phrase is  returned in alphabetical order: ", function () {
     it("phrase 'b' returned is a 'no'", function () {
         var result = returnStringAlphabeticalOrder("b");
@@ -19,7 +18,7 @@ describe("Checking if phrase is  returned in alphabetical order: ", function () 
         var result = returnStringAlphabeticalOrder("deefiiilntvy");
         expect(result).toBeTruthy();
     });
-    
+
     it("no letters, '' is an exception", function () {
         expect(function () { returnStringAlphabeticalOrder(""); }).toThrow(new Error("Parameter must contain at least two letter - not use white space"));
     });
