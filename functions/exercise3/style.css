@@ -1,0 +1,25 @@
+body {
+   padding: 20px;
+   background-color: #bdbdbd;
+}
+
+input {
+    background-color: #ccccff;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+button { 
+    background-color: #ccccff;
+    border: 5px solid #330033;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.substrings{
+    font-style: italic;
+    font-weight: bolder;
+}
