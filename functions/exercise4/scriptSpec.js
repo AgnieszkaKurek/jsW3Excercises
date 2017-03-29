@@ -1,17 +1,17 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals formatPhrase*/
+/*globals validateAsPhraseConsistsOfLettersOnly*/
 
-describe("Check if phrase is consist only of letters", function () {
+describe("Check if phrase consists of letters only.", function () {
   it("white space ' ' is an exception", function () {
-    expect(function () { formatPhrase(" "); }).toThrow(new Error("The parameter should be consist only of letters - not use white space"));
+    expect(function () { validateAsPhraseConsistsOfLettersOnly(" "); }).toThrow(new Error("The parameter should be consist only of letters."));
+  });
+  it("number 1 is an exception", function () {
+    expect(function () { validateAsPhraseConsistsOfLettersOnly(1); }).toThrow(new Error("The parameter should be consist only of letters"));
   });
   it("number '1' is an exception", function () {
-    expect(function () { formatPhrase(1); }).toThrow(new Error("The parameter should be consist only of letters - not use a number"));
-  });
-  it("number '1' is an exception", function () {
-    expect(function () { formatPhrase("1"); }).toThrow(new Error("The parameter should be consist only of letters - not use a number"));
+    expect(function () { validateAsPhraseConsistsOfLettersOnly("1"); }).toThrow(new Error("The parameter should be consist only of letters"));
   });
   it("punctuation mark '!' is an exception", function () {
-    expect(function () { formatPhrase("!"); }).toThrow(new Error("The parameter should be consist only of letters - not use punctuation mark"));
+    expect(function () { validateAsPhraseConsistsOfLettersOnly("!"); }).toThrow(new Error("The parameter should be consist only of letters"));
   });
 });
