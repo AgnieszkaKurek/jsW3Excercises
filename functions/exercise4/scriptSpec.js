@@ -1,17 +1,17 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals formatPhrase*/
 
-describe("Check if", function () {
-  it("phrase is number ", function () {
+describe("Check if phrase is consist only of letters", function () {
+  it("white space ' ' is an exception", function () {
     expect(function () { formatPhrase(" "); }).toThrow(new Error("The parameter should be consist only of letters - not use white space"));
   });
-  it("phrase is number ", function () {
-    expect(function () { formatPhrase(1); }).toThrow(new Error("The parameter should be consist only of letters - not use a numbers"));
+  it("number '1' is an exception", function () {
+    expect(function () { formatPhrase(1); }).toThrow(new Error("The parameter should be consist only of letters - not use a number"));
   });
-  it("phrase is number ", function () {
-    expect(function () { formatPhrase("1"); }).toThrow(new Error("The parameter should be consist only of letters - not use a numbers"));
+  it("number '1' is an exception", function () {
+    expect(function () { formatPhrase("1"); }).toThrow(new Error("The parameter should be consist only of letters - not use a number"));
   });
-  it("phrase is number ", function () {
-    expect(function () { formatPhrase("!"); }).toThrow(new Error("The parameter should be consist only of letters - not use punctuation marks"));
+  it("punctuation mark '!' is an exception", function () {
+    expect(function () { formatPhrase("!"); }).toThrow(new Error("The parameter should be consist only of letters - not use punctuation mark"));
   });
 });
