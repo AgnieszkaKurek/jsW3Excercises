@@ -1,8 +1,8 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals validateAsPhraseConsistsOfLettersOnly*/
 
-describe("Check if phrase consists of letters only.", function () {
-  it("phrase 'pig' is correct ", function () {
+describe("Check if phrase consists of letters only:", function () {
+  it("phrase 'pig' is correct", function () {
     var result = validateAsPhraseConsistsOfLettersOnly("pig");
     expect(result).toBeTruthy();
   });
