@@ -4,7 +4,7 @@
 describe("Check if phrase consists of letters only:", function () {
   it("phrase 'pig' is correct", function () {
     var result = validateAsPhraseConsistsOfLettersOnly("pig");
-    expect(result).toBeTruthy();
+    expect(result).toEqual(true);
   });
   it("white space ' ' is an exception", function () {
     expect(function () { validateAsPhraseConsistsOfLettersOnly(" "); }).toThrow(new Error("The parameter should be consist only of letters."));

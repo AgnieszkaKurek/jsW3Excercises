@@ -1,10 +1,11 @@
 "use strict";
 
 function validateAsPhraseConsistsOfLettersOnly(phrase) {
-    if (/^[a-zA-Z]*$/g.test(phrase)) {
-        return phrase;
+    var validate = /^[a-zA-Z]*$/g.test(phrase);
+    if (validate) {
+        return true;
     }
-    if (!/^[a-zA-Z]*$/g.test(phrase)) {
+    if (!(validate)) {
         throw new Error("The parameter should be consist only of letters.");
     }
 }
