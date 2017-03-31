@@ -13,6 +13,7 @@ describe("Converting the first letter of each word in the string into upper case
     var stringInUpperCase = convertWordFirstLetterIntoUpperCase("piglet");
     expect(stringInUpperCase).toEqual("Piglet");
   });
+
    it("string 'the quick brown fox' gives  string 'The Quick Brown Fox'", function () {
     var stringInUpperCase = convertWordFirstLetterIntoUpperCase("the quick brown fox");
     expect(stringInUpperCase).toEqual("The Quick Brown Fox");
