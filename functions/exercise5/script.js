@@ -1,10 +1,13 @@
 "use strict";
 
 function convertWordFirstLetterIntoUpperCase(string){
-    var array = string.split(" ");
-    for(var i = 0; i < array.length; i++){
-        array[i] = array[i][0].toUpperCase() + array[i].substring(1);
+    var splitString = string.split(" ");
+    var array = [];
+    for(var i = 0; i < splitString.length; i++){
+        array.push(splitString[i].charAt(0).toUpperCase() + splitString[i].slice(1));
     }
     var stringInUpperCase = array.join(" ");
    return stringInUpperCase;
 }
+
+
