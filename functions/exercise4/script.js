@@ -8,8 +8,7 @@ function validateAsPhraseConsistsOfLettersOnly(phrase) {
     return true;
 }
 
-
-function sortLettersInThePhrase(isValid) {
-   validateAsPhraseConsistsOfLettersOnly(isValid);
-   return isValid.split("").sort().join("");
+function sortLettersInThePhrase(phrase) {
+    validateAsPhraseConsistsOfLettersOnly(phrase);
+    return phrase.split("").sort().join("");
 }
