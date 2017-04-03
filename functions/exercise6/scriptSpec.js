@@ -7,8 +7,8 @@ describe("Finding the longest word within the sentence", function () {
         expect(theLongestWord).toEqual("pig");
     });
 
-    it("string 'pig pig' gives  word 'pig'", function () {
-        var theLongestWord = findTheLongestWordWithinTheSentence("pig");
+    it("string 'pig pig' gives  word 'pig pig'", function () {
+        var theLongestWord = findTheLongestWordWithinTheSentence("pig pig");
         expect(theLongestWord).toEqual("pig");
     });
 
