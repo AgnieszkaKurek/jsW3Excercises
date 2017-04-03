@@ -1,11 +1,13 @@
 "use strict";
 
-function convertWordFirstLetterIntoUpperCase(string) {
-    var splitString = string.split(" ");
-    var array = [];
-    for (var i = 0; i < splitString.length; i++) {
-        array.push(splitString[i].charAt(0).toUpperCase() + splitString[i].slice(1));
+function convertWordFirstLetterIntoUpperCase(sentence) {
+    var words = sentence.split(" ");
+    for(var i = 0; i < words.length; i++){
+        var word = words[i];
+        if (word.length > 0){
+            words[i] = word[0].toUpperCase() + word.substring(1);
+        }
     }
-    var stringInUpperCase = array.join(" ");
-    return stringInUpperCase;
+    var uppercasedSentence = words.join(" ");
+    return uppercasedSentence;
 }
