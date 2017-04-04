@@ -2,12 +2,16 @@
 /*globals findTheLongestWordWithinTheSentence*/
 
 describe("Finding the longest word within the sentence", function () {
+    it("empty string '' gives  empty string ''", function () {
+        var theLongestWord = findTheLongestWordWithinTheSentence("");
+        expect(theLongestWord).toEqual("");
+ });
     it("string 'pig' gives  word 'pig'", function () {
         var theLongestWord = findTheLongestWordWithinTheSentence("pig");
         expect(theLongestWord).toEqual("pig");
     });
 
-    it("string 'pig pig' gives  word 'pig pig'", function () {
+    it("string 'pig pig' gives  word 'pig'", function () {
         var theLongestWord = findTheLongestWordWithinTheSentence("pig pig");
         expect(theLongestWord).toEqual("pig");
     });
