@@ -2,6 +2,14 @@
 /*globals isPrimeNumber*/
 
 describe("Checking if number is prime:", function () {
+    it("number '1' is a prime", function () {
+        var testNumber = isPrimeNumber(1);
+        expect(testNumber).toBeFalsy();
+    });
+     it("number '2' is a prime", function () {
+        var testNumber = isPrimeNumber(2);
+        expect(testNumber).toBeTruthy();
+    });
     it("number '3' is a prime", function () {
         var testNumber = isPrimeNumber(3);
         expect(testNumber).toBeTruthy();
