@@ -12,9 +12,19 @@ describe("Getting second lowest and second gratest numbers with array", function
         expect(numbers.SecondSmallest).toEqual(9);
         expect(numbers.SecondLargest).toEqual(1);
     });
-    it("numerical sequence [13] get second lowest number 13 and second grates number 13", function () {
+    it("numerical sequence [13]  second lowest number  and second grates number are undefined", function () {
         var numbers =  getSecondLowestAndSecondGreatestNumbers([13]);
-        expect(numbers.SecondSmallest).toEqual(13);
-        expect(numbers.SecondLargest).toEqual(13);
+        expect(numbers.SecondSmallest).toEqual("undefined");
+        expect(numbers.SecondLargest).toEqual("undefined");
+    });
+    it("numerical sequence [4,1,2,5,3]  second lowest number  and second grates number are undefined", function () {
+        var numbers =  getSecondLowestAndSecondGreatestNumbers([4,1,2,5,3]);
+        expect(numbers.SecondSmallest).toEqual(2);
+        expect(numbers.SecondLargest).toEqual(4);
+    });
+    it("numerical sequence [1,1,2,3,3]  second lowest number  and second grates number are undefined", function () {
+        var numbers =  getSecondLowestAndSecondGreatestNumbers([1,1,2,3,3]);
+        expect(numbers.SecondSmallest).toEqual(2);
+        expect(numbers.SecondLargest).toEqual(2);
     });
 });
