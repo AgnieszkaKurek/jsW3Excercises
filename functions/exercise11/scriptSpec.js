@@ -1,9 +1,9 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals getSecondLowestAndSecondGreatestNumbers*/
 
-describe("Getting second lovest and second gratest numbers with array", function () {
-    it("[1, 2, 3, 4, 5] is 2 and 4 ", function () {
-        var array = getSecondLowestAndSecondGreatestNumbers([1, 2, 3, 4, 5]);
-        expect(array).toEqual(2, 4);
+describe("Getting second lowest and second gratest numbers with array", function () {
+    it("numerical sequence [1, 2, 3, 4, 5] get second lowest number 2 and second grates number 4", function () {
+        var secondLowestAndGreatestNumbers = getSecondLowestAndSecondGreatestNumbers([1, 2, 3, 4, 5]);
+        expect(secondLowestAndGreatestNumbers).toEqual(2, 4);
     });
 });
