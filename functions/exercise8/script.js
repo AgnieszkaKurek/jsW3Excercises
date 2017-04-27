@@ -15,3 +15,5 @@ function isPrimeNumber(number) {
         return true;
     }
 }
+
+
