@@ -7,7 +7,7 @@ describe("Getting factors of a positive integer", function () {
         var factors = getFactorsOfPositiveInteger(1);
         expect(factors).toEqual([1]);
     });
-    it("factors of number X are are 1,2,5,10", function () {
+    it("factors of number 10 are 1,2,5,10", function () {
         var factors = getFactorsOfPositiveInteger(10);
         expect(factors).toEqual([1,2,5,10]);
     });
