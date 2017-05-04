@@ -3,7 +3,7 @@
 
 
 describe("Getting factors of a positive integer", function () {
-    it("factors of number 1 are 1", function () {
+    it("factors of number 1 is 1", function () {
         var factors = getFactorsOfPositiveInteger(1);
         expect(factors).toEqual([1]);
     });
