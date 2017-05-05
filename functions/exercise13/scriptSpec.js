@@ -1,7 +1,6 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals getFactorsOfPositiveInteger*/
 
-
 describe("Getting factors of a positive integer", function () {
     it("factors of number 1 is 1", function () {
         var factors = getFactorsOfPositiveInteger(1);
