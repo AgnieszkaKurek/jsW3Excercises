@@ -13,35 +13,3 @@ function getAmountOfCoins(amount) {
     }
     return amountOfCoins;
 }
-
-
-
-
-
-
-
-
-
-var amountToCoins = function (amount, coinArr) {
-
-    var arr = [];
-
-
-    // Start the loop again if the current amount is greater than the highest coinnumber
-
-    for (var i = 0; i < coinArr.length; i++) {
-
-        if (amount >= coinArr[i]) {
-
-            arr.push(coinArr[i]);
-            amount -= coinArr[i];
-
-            // Start the loop over again
-            i = -1;
-            continue;
-        }
-
-    }
-
-    return arr;
-};
