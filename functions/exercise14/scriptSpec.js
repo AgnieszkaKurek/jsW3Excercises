@@ -2,6 +2,10 @@
 /*globals getAmountOfCoins*/
 
 describe("Getting  amount of coins ", function () {
+     it("in the amount of 3 are 2, 1", function () {
+        var amountOfCoins = getAmountOfCoins(3);
+        expect(amountOfCoins).toEqual([2, 1]);
+    });
     it("in the amount of 5 is 5", function () {
         var amountOfCoins = getAmountOfCoins(5);
         expect(amountOfCoins).toEqual([5]);
