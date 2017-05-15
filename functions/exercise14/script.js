@@ -1,17 +1,16 @@
 "use strict";
 
 function getAmountOfCoins(amount) {
-    var denominationsOfCoins = [25, 10, 5, 2, 1];
-    var amountOfCoins = [];
+    var nominasls = [25, 10, 5, 2, 1];
+    var coin = [];
+    var curentCoinIndex = 0;
     while (amount > 0) {
-        for (var i = 0; i < denominationsOfCoins.length; i++) {
-            var curentCoins = denominationsOfCoins[i];
-            if (amount >= curentCoins) {
-                amountOfCoins.push(curentCoins);
-                amount -= curentCoins;
-                i = -1;
-            }
+        var curentCoin = nominasls[curentCoinIndex];
+        while (amount >= curentCoin) {
+            coin.push(curentCoin);
+            amount -= curentCoin;
         }
+        curentCoinIndex++;
     }
-    return amountOfCoins;
+    return coin;
 }
