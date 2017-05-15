@@ -2,15 +2,15 @@
 
 function getAmountOfCoins(amount) {
     var denominations = [25, 10, 5, 2, 1];
-    var coin = [];
-    var curentCoinIndex = 0;
+    var coins = [];
+    var curentDenominationsIndex = 0;
     while (amount > 0) {
-        var curentCoin = denominations[curentCoinIndex];
+        var curentCoin = denominations[curentDenominationsIndex];
         while (amount >= curentCoin) {
-            coin.push(curentCoin);
+            coins.push(curentCoin);
             amount -= curentCoin;
         }
-        curentCoinIndex++;
+        curentDenominationsIndex++;
     }
-    return coin;
+    return coins;
 }
