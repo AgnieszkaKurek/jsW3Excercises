@@ -44,7 +44,9 @@ module.exports = function (config) {
       'functions/exercise13/script.js',
       'functions/exercise13/scriptSpec.js',
       'functions/exercise14/script.js',
-      'functions/exercise14/scriptSpec.js'
+      'functions/exercise14/scriptSpec.js',
+      'functions/exercise15/script.js',
+      'functions/exercise15/scriptSpec.js'
 
     ],
 
