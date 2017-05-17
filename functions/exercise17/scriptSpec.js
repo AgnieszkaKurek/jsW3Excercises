@@ -2,7 +2,7 @@
 /*globals getNumberOfOccurrencesOfLetters*/
 
 describe("Getting the number of occurrences of each letters in specified phrase", function () {
-    it("phrase 'a' give one letter 'a'", function () {
+    it("phrase 'a' gives one letter 'a'", function () {
         var numbersOfLetters = getNumberOfOccurrencesOfLetters(["a"]);
         expect(numbersOfLetters.letter.a).toEqual([1]);
     });
