@@ -4,15 +4,11 @@
 describe("Getting the quantity of occurrences of each letter in a phrase", function () {
     it("white space ' ' isn't  letter - isn't taken into account", function () {
         var quantityOfLetters = getQuantityOfLetters(" ");
-        expect(quantityOfLetters).toEqual([
-            { letter: " ", quantity: 0 },
-        ]);
+        expect(quantityOfLetters).toEqual([]);
     });
     it("number '1' isn't  letter - isn't taken into account", function () {
         var quantityOfLetters = getQuantityOfLetters(" ");
-        expect(quantityOfLetters).toEqual([
-            { letter: "1", quantity: 0 },
-        ]);
+        expect(quantityOfLetters).toEqual([]);
     });
     it("phrase 'a' gives one letter", function () {
         var quantityOfLetters = getQuantityOfLetters("a");
