@@ -8,14 +8,14 @@ describe("Getting the quantity of occurrences of each letter in a phrase", funct
             { letter: "a", quantity: 1 },
         ]);
     });
-    it("phrase 'Aa' gives two letter 'a'", function () {
+    it("phrase 'Aa' gives two letter 'a'- if phrase has uppercase, they are treated as lowercase", function () {
         var quantityOfLetters = getQuantityOfLetters("a");
         expect(quantityOfLetters).toEqual([
             { letter: "a", quantity: 2 },
         ]);
     });
     it("in the phrase 'pig' each letter occurs once", function () {
-        var quantityOfLetters = getQuantityOfLetters("a");
+        var quantityOfLetters = getQuantityOfLetters("pig");
         expect(quantityOfLetters).toEqual([
             { letter: "p", quantity: 1 },
             { letter: "i", quantity: 1 },
@@ -23,15 +23,15 @@ describe("Getting the quantity of occurrences of each letter in a phrase", funct
         ]);
     });
     it("in the phrase 'piggip' each letter occurs twice", function () {
-        var quantityOfLetters = getQuantityOfLetters("a");
+        var quantityOfLetters = getQuantityOfLetters("piggip");
         expect(quantityOfLetters).toEqual([
             { letter: "p", quantity: 2 },
             { letter: "i", quantity: 2 },
             { letter: "g", quantity: 2 },
         ]);
     });
-    it("in the phrase 'pigs and piglets' letter 'p','i','g','s' occurs twice and  the rest of the letters occurs once", function () {
-        var quantityOfLetters = getQuantityOfLetters("a");
+    it("in the phrase 'pigs and piglets' letter 'p','i','g','s' occurs twice and  the rest of the letters occurs once - white spaces aren't taken into account", function () {
+        var quantityOfLetters = getQuantityOfLetters("pigs and piglets");
         expect(quantityOfLetters).toEqual([
             { letter: "p", quantity: 2 },
             { letter: "i", quantity: 2 },
