@@ -1,5 +1,22 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals getQuantityOfLetters*/
+/*globals validateAsPhraseConsistsOfLettersOnly*/
+
+describe("Check if phrase consists of letters only:", function () {
+  it("phrase 'pig' is correct", function () {
+    var result = validateAsPhraseConsistsOfLettersOnly("pig");
+    expect(result).toEqual(true);
+  });
+  it("white space ' ' isn't phrase", function () {
+    var result = validateAsPhraseConsistsOfLettersOnly(" ");
+    expect(result).toEqual(false);
+  });
+  it("string of numbers and punctuation characters '123!?' isn't phrase", function () {
+   var result = validateAsPhraseConsistsOfLettersOnly("123!?");
+    expect(result).toEqual(false);
+  });
+});
+
 
 describe("Getting the quantity of occurrences of each letter in a phrase", function () {
     it("phrase 'a' gives one letter", function () {
