@@ -2,8 +2,8 @@
 
 function getQuantityOfLetters(phrase) {
     var quantityOfLetters = [];
-    for (let character of phrase ) {
-     character = character.toLowerCase();
+    for (let character of phrase) {
+        character = character.toLowerCase();
         if (character.match(/[a-z]/)) {
             var existingChars = quantityOfLetters.filter(item => item.letter === character);
             if (existingChars.length === 0) {
