@@ -3,8 +3,8 @@
 
 describe("Getting the quantity of occurrences of each letter in a phrase", function () {
     it("white space ' ' isn't  letter - isn't taken into account", function () {
-        var quantityOfLetters = getQuantityOfLetters(" ");
-        expect(quantityOfLetters).toEqual([]);
+       var quantityOfLetters = getQuantityOfLetters(" ");
+       expect(quantityOfLetters).toEqual([]);
     });
     it("number '1' isn't  letter - isn't taken into account", function () {
         var quantityOfLetters = getQuantityOfLetters(" ");
@@ -17,7 +17,7 @@ describe("Getting the quantity of occurrences of each letter in a phrase", funct
         ]);
     });
     it("phrase 'Aa' gives two letter 'a'- if phrase has uppercase, they are treated as lowercase", function () {
-        var quantityOfLetters = getQuantityOfLetters("a");
+        var quantityOfLetters = getQuantityOfLetters("Aa");
         expect(quantityOfLetters).toEqual([
             { letter: "a", quantity: 2 },
         ]);
