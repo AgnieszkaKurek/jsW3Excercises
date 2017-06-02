@@ -1,7 +1,7 @@
 "use strict";
 
-function returnElementsLargerThanNumber(referenceNumber, numberArray) {
-  
-   return numberArray.filter(function (item) { return item >  referenceNumber;});
+function returnElementsLargerThanNumber(referenceNumber, sequence) {
+    return sequence.filter(function (item => item > referenceNumber));
 }
 
+//(v => v % 2 == 0);
