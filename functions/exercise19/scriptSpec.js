@@ -8,11 +8,11 @@ describe("Returning array elements larger than a number", function () {
     });
     
     it("array can have numeric values only - in the array are only items different than numeric value", function () {
-        expect(function () { returnElementsLargerThanNumber("a"); }).toThrow(new Error("Array can have numeric values only."));
+        expect(function () { returnElementsLargerThanNumber(10, ["a"]); }).toThrow(new Error("Array can have numeric values only."));
     });
 
     it("array can have numeric values only - in the array are also items different than numeric value", function () {
-        expect(function () { returnElementsLargerThanNumber("ab", 12, 10); }).toThrow(new Error("Array can have numeric values only."));
+        expect(function () { returnElementsLargerThanNumber(10, [12, "ab"]); }).toThrow(new Error("Array can have numeric values only."));
     });
 
     it("if in the array is only  referenc number, any elements are larger than referenc number ", function () {
