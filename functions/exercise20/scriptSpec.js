@@ -3,9 +3,11 @@
 
 describe("Getting the a string id (specified length) of random characters", function () {
     it("If the specified length is 1, will be return one random character", function () {
-        var randomCharacters = getStringIdOfRandomChars(1);
-        expect(randomCharacters).toEqual([
-            { characters: Text, stringLenght: 1 },
-        ]);
+        var stringIdOfRandomChars = getStringIdOfRandomChars();
+        expect(stringIdOfRandomChars).toEqual(String,1);
+    });
+    it("If the specified length is 25, will be return 25 random characters", function () {
+        var stringIdOfRandomChars = getStringIdOfRandomChars(25);
+        expect(stringIdOfRandomChars).toEqual(String,25);
     });
 });
