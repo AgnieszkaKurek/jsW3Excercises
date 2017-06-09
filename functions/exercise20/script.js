@@ -2,15 +2,12 @@
 
 function getStringIdOfRandomChars(specifiedLength) {
     const stringCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    let getStringIdOfRandomChars = "";
+    let randomCharacters = "";
+    const stringCharactersLenght = stringCharacters.length;
     for (let i = 0; i < specifiedLength; i++) {
-        let stringCharactersLenght = stringCharacters.length;
-        getStringIdOfRandomChars +=
-            stringCharacters
-            [(Math.floor
-                (Math.random()
-                * stringCharactersLenght))];
+        let charater = Math.floor(Math.random() * stringCharactersLenght);
+        randomCharacters += stringCharacters[charater];
     }
-    return getStringIdOfRandomChars;
+    return randomCharacters;
 
 }
