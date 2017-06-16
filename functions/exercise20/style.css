@@ -1,0 +1,35 @@
+body {
+   padding: 20px;
+   background-color: #bdbdbd;
+}
+
+h1 {
+    text-align: center;
+    color: #330033;
+}
+
+input {
+    background-color: #ccccff;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.resultStyle {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin: auto;
+}
+
+button { 
+    background-color: #ccccff;
+    border: 5px solid #330033;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

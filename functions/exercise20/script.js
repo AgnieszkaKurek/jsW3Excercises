@@ -10,3 +10,10 @@ function getStringIdOfRandomChars(specifiedLength) {
     }
     return randomCharacters;
 }
+
+function showRandomCharacters(stringCharacters, randomCharacters) {
+    const text = getStringIdOfRandomChars(stringCharacters);
+    document.getElementById("text").innerHTML = text;
+    let result = getStringIdOfRandomChars(randomCharacters);
+    document.getElementById("result").innerHTML = result;
+}
