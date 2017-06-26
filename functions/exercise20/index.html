@@ -9,10 +9,13 @@
 </head>
 
 <body>
-    <label>Quantity strings:<input type = "number" min = "1" id = "quantityStrings"/></label>
-    <label>Length strings:<input type = "number"  min = "1" id = "lengthStrings"/></label>
+    <label for = "quantityStrings">Number of strings to be generated:</label>
+    <input name = "quantityStrings" type = "number" min = "1" id = "quantityStrings"/>
+    <label for="lengthStrings">Length of strings to be generated:</label>
+    <input name = "lengthStrings" type = "number"  min = "1" id = "lengthStrings"/>
     <button onclick="showStringIdOfRandomChars()">Generates a string id (specified length) of random characters.</button>
-    <label>Result:<output  id= "result"/></label>
+    <label for="result">Result:</label>
+    <output name = "result" id= "result"/>
 </body>
 
 </html>
