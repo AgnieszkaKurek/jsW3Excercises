@@ -12,7 +12,7 @@ function getStringIdOfRandomChars(specifiedLength) {
 }
 
 function showStringIdOfRandomChars() {
-   let numberOfStringsToGenerate = document.getElementById("numberOfStringsToGenerate").value;
-   let stringLength = document.getElementById("stringLength");
-   let result = getStringIdOfRandomChars(specifiedLength);
+    let specifiedLength = document.getElementById("randomCharacters");
+    let randomCharacters = getStringIdOfRandomChars(specifiedLength);
+    document.getElementById("result").innerHTML = randomCharacters;
 }
