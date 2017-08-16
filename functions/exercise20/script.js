@@ -11,8 +11,9 @@ function getStringIdOfRandomChars(specifiedLength) {
     return randomCharacters;
 }
 
+
 function showStringIdOfRandomChars() {
-    let specifiedLength = document.getElementById("randomCharacters");
+    let specifiedLength = document.getElementById("lengthStrings").value;
     let randomCharacters = getStringIdOfRandomChars(specifiedLength);
     document.getElementById("result").innerHTML = randomCharacters;
 }
