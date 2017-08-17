@@ -1,6 +1,6 @@
 "use strict";
 
-function getStringIdOfRandomChars(specifiedLength) {
+function getRandomChars(specifiedLength) {
     const stringCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     const stringCharactersLength = stringCharacters.length;
     let randomCharacters = "";
@@ -12,7 +12,12 @@ function getStringIdOfRandomChars(specifiedLength) {
 }
 
 function showRandomCharactersOfSpecifiedLength() {
-    let specifiedLength = document.getElementById("lengthOfStringsToBeGenerated").value;
-    let randomCharacters = getStringIdOfRandomChars(specifiedLength);
-    document.getElementById("result").innerHTML = randomCharacters;
+    let lengthOfStringsToBeGenerated = document.getElementById("lengthOfStringsToBeGenerated").value;
+    let numberOfStringsToBeGenerated = document.getElementById("numberOfStringsToBeGenerated").value;
+    let randomCharacters = [];
+    for (let i = 0; i < numberOfStringsToBeGenerated; i++) {
+        randomCharacters.push(getRandomChars(lengthOfStringsToBeGenerated));
+    }
+    let result = randomCharacters.join("<br /> ");
+    document.getElementById("result").innerHTML = result;
 }
