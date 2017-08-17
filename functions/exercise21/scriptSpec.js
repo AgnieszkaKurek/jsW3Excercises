@@ -10,5 +10,4 @@ describe("Getting all possible subset with a fixed length combinations in an arr
             [2, 1]
         ]);
     });
-
 }));
