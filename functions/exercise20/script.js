@@ -14,14 +14,10 @@ function getRandomChars(specifiedLength) {
 function showRandomCharactersOfSpecifiedLength() {
     let lengthOfStringsToBeGenerated = document.getElementById("lengthOfStringsToBeGenerated").value;
     let numberOfStringsToBeGenerated = document.getElementById("numberOfStringsToBeGenerated").value;
-    let randomCharacters =[];
+    let randomCharacters = [];
     for (let i = 0; i < numberOfStringsToBeGenerated; i++) {
-        //todo: call getStringIdOfRandomChars function and collect the results
-        //let randomCharacters = getRandomChars(lengthOfStringsToBeGenerated);
-        //randomCharacters = getRandomChars(lengthOfStringsToBeGenerated);
         randomCharacters.push(getRandomChars(lengthOfStringsToBeGenerated));
-        
-    } 
-     let result = randomCharacters.join("<br /> ");
+    }
+    let result = randomCharacters.join("<br /> ");
     document.getElementById("result").innerHTML = result;
 }
