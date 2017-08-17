@@ -3,13 +3,13 @@
 
 describe("Getting all possible subset with a fixed length combinations in an array", function () {
     it("If the array [1, 2, 3] we will get all subsets of length 2, we get subsets [2, 1], [3, 1], [3, 2], [3, 2, 1]", function () {
-        var subsets = getPossibleSubset([1,2,3], 2);
+        var subsets = getPossibleSubset([1, 2, 3], 2);
         expect(subsets).toEqual(
-            [3,2],
-            [3,1],
-            [2,1],
+            [3, 2],
+            [3, 1],
+            [2, 1],
             [3, 2, 1]
         );
     });
-    
+
 });
