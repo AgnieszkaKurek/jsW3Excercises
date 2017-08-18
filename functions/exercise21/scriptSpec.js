@@ -10,4 +10,18 @@ describe("Getting all possible subset with a fixed length combinations in an arr
             [2, 1]
         ]);
     }));
+    it("If the array [[3, 2],[3, 1],[2, 1]] we will get array [[2, 1], [3, 1], [3, 2]]",  (() => {
+        expect([[3, 2],[3, 1],[2, 1]]).toHaveSameItems([
+            [3, 2],
+            [3, 1],
+            [2, 1]
+        ]);
+    }));
+    it("If the array[[3, 2],[3, 1],[2, 1]] we will get array [[2, 1], [3, 1], [3, 2]]",  (() => {
+        expect([[3, 2],[3, 1],[2, 1]]).toHaveSameItems([
+            [2, 3],
+            [1, 3],
+            [1, 2]
+        ]);
+    }));
 }));
