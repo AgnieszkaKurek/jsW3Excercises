@@ -20,9 +20,9 @@ describe("Getting all possible subset with a fixed length combinations in an arr
 
     it("If the array [1, 1, 1] we will get all subsets of length 2, we get subset [[1, 1]]", (() => {
         let subsets = getPossibleSubsets([1, 1, 1], 2);
-        let expetedArray = [[1, 1]];
+        let expetedArray = [[1, 1], [1, 1], [1, 1]];
         let arraysAreEquvalent = arrayOfArraysHaveTheSameItems(subsets, expetedArray);
-        expect(arraysAreEquvalent).toBe(false);
+        expect(arraysAreEquvalent).toBe(true);
     }));
 
     it("If the length of a member is bigger than 2 it is  error", function () {
