@@ -10,8 +10,6 @@ function getPossibleSubsets(set, numberOfItems) {
         }
         return subsets;
     } else {
-        throw new Error("Number of subset different than 2 not implemented yet.");
+        throw new Error("Size of subsets different than 2 not implemented yet.");
     }
 }
-
-
