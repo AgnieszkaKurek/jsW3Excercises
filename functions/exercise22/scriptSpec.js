@@ -4,13 +4,13 @@
 
 describe("Count the number of occurrences of the specified letter within the string", (() => {
 
-    it("Within the string there are 2 letters o", (() => {
+    it("In the string the given letter occurs x times", (() => {
         let numberOccurrencesLetter = countNumberOccurrencesOfSpecifiedLetterWithinString("wresourcecom", "o");
         expect(numberOccurrencesLetter).toEqual(2);
     }));
 
-    it("Within the string there are 3 letters p", (() => {
-        let numberOccurrencesLetter = countNumberOccurrencesOfSpecifiedLetterWithinString("small pink piglets are so pink and soft", "p");
+    it("In the string the given letter occurs x times", (() => {
+        let numberOccurrencesLetter = countNumberOccurrencesOfSpecifiedLetterWithinString("I like fruit waffles and whipped cream", "f");
         expect(numberOccurrencesLetter).toEqual(3);
     }));
 
