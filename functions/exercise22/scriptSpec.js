@@ -3,7 +3,7 @@
 
 describe("Count the number of occurrences of the specified letter within the string", (() => {
 
-    it("In the string 'wresourcecom' letter 'o' occurs 2 time", (() => {
+    it("In the string 'wresourcecom' letter 'o' occurs 2 times", (() => {
         let numberOccurrencesLetter = countNumberOccurrencesOfSpecifiedLetterWithinString("wresourcecom", "o");
         expect(numberOccurrencesLetter).toEqual(2);
     }));
