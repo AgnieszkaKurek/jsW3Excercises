@@ -1,7 +1,11 @@
 "use strict";
 
 function countNumberOccurrencesOfSpecifiedLetterWithinString(phrase, checkedLetter) {
-    let countCheckedLetter = phrase.match(RegExp(checkedLetter, "gi"));
-    let result = countCheckedLetter.length;
-    return result;
+    let countCheckedLetter = 0;
+    for (let item of phrase) {
+        if (item === checkedLetter) {
+            countCheckedLetter++;
+        }
+    }
+    return countCheckedLetter;
 }
