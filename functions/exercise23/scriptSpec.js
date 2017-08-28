@@ -7,5 +7,9 @@ describe("Find the first not repeated character in string", (() => {
             let firstNotRepeatedCharacter = findFirstNotRepeatedCharacter("abacddbec");
             expect(firstNotRepeatedCharacter).toEqual("e");
         }));
+        it("In the string 'abba' all characters repeated, we get ''", (() => {
+            let firstNotRepeatedCharacter = findFirstNotRepeatedCharacter("abba");
+            expect(firstNotRepeatedCharacter).toEqual("");
+        }));
 
     }));
