@@ -57,7 +57,9 @@ module.exports = function (config) {
       'functions/exercise20/scriptSpec.js',
       'functions/exercise21/script.js',
       'functions/exercise21/getPossibleSubsetsTestsHelpers.js',
-      'functions/exercise21/scriptSpec.js'
+      'functions/exercise21/scriptSpec.js',
+      'functions/exercise22/script.js',
+      'functions/exercise22/scriptSpec.js'
 
     ],
 
