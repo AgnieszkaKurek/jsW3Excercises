@@ -1,11 +1,13 @@
 "use strict";
 
-  function findFirstNotRepeatedCharacter(phrase) {
-      let firstNotRepeatedCharacter = "";
-      for(let i = 0; i < phrase.length; i++){
-          if(phrase.indexOf(phrase[i]) === phrase.lastIndexOf(phrase[i])){
-              firstNotRepeatedCharacter = phrase[i];
-          } 
-      }
-      return firstNotRepeatedCharacter;
-  }
+function findFirstNotRepeatedCharacter(phrase) {
+    let firstNotRepeatedCharacter = "";
+    for (let i = 0; i < phrase.length; i++) {
+        let char = phrase[i];
+        if (phrase.indexOf(char) === phrase.lastIndexOf(char)) {
+            firstNotRepeatedCharacter = char;
+            return firstNotRepeatedCharacter;
+        }
+    }
+    return firstNotRepeatedCharacter;
+}
