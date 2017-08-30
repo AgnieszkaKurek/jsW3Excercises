@@ -24,7 +24,7 @@ describe("Find country with the longest name from given set of countries", (() =
     }));
 
     it("Set of counrty have a two name cantry with the lenght (Name is multiple words - contains letters and spaces ), function return two name", (() => {
-        let longestCountryName = getLongestCountryName(["Antigua and Barbuda","Cuba" ,"Czech Republic", "Peru"]);
-        expect(longestCountryName).toEqual([["Antigua and Barbuda", "Czech Republic"]]);
+        let longestCountryName = getLongestCountryName(["New Zealand","Cuba" ,"North Korea", "Peru"]);
+        expect(longestCountryName).toEqual(["New Zealand", "North Korea"]);
     }));
 }));
