@@ -18,13 +18,13 @@ describe("Find country with the longest name from given set of countries", (() =
         expect(longestCountryName).toEqual(["Peru","Cuba"]);
     }));
 
-    it("Set of counrty have a three same  name cantry, function return one name", (() => {
-        let longestCountryName = getLongestCountryName(["Peru", "Peru", "Peru"]);
-        expect(longestCountryName).toEqual(["Peru"]);
+    it("Set of counrty have a three same  name cantry, function return one name tree times", (() => {
+        let longestCountryName = getLongestCountryName(["Peru", "China", "Poland", "Cuba", "Poland", "Peru", "Poland"]);
+        expect(longestCountryName).toEqual(["Poland","Poland", "Poland"]);
     }));
 
     it("Set of counrty have a two name cantry with the lenght (Name is multiple words - contains letters and spaces ), function return two name", (() => {
-        let longestCountryName = getLongestCountryName(["Antigua and Barbuda", "Czech Republic"]);
+        let longestCountryName = getLongestCountryName(["Antigua and Barbuda","Cuba" ,"Czech Republic", "Peru"]);
         expect(longestCountryName).toEqual([["Antigua and Barbuda", "Czech Republic"]]);
     }));
 }));
