@@ -14,7 +14,7 @@ describe("Find country with the longest name from given set of countries", (() =
     }));
 
     it("Set of counrty have a two name cantry with the same number of letters, function return two name", (() => {
-        let longestCountryName = getLongestCountryName(["Peru"," Cuba"]);
+        let longestCountryName = getLongestCountryName(["Peru","Cuba"]);
         expect(longestCountryName).toEqual(["Peru","Cuba"]);
     }));
 
