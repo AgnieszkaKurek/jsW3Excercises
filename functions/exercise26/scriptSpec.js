@@ -17,8 +17,8 @@ describe(" Find longest substring in a given a string without repeating characte
         expect(substringsWithoutRepeatingCharacters).toEqual(["a", "A"]);
     }));
 
-    it("If string is empty (does not contain any characters) then the longest substring without repeating characters is ''", (() => {
+    it("If string is empty (does not contain any characters), then are not  any longest substrings", (() => {
         let substringsWithoutRepeatingCharacters = getLongestSubstringsWithoutRepeatingCharacters("");
-        expect(substringsWithoutRepeatingCharacters).toEqual([""]);
+        expect(substringsWithoutRepeatingCharacters).toEqual([]);
     }));
 }));
