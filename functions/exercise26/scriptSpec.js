@@ -1,5 +1,6 @@
 /// <reference path="../../typings/globals/jasmine/index.d.ts" />
 /*globals getLongestSubstringsWithoutRepeatingCharacters*/
+/*globals hasUniqueCharacters*/
 
 describe(" Find longest substring in a given a string without repeating characters", (() => {
 
@@ -12,9 +13,10 @@ describe(" Find longest substring in a given a string without repeating characte
         let substringsWithoutRepeatingCharacters = getLongestSubstringsWithoutRepeatingCharacters("abba");
         expect(substringsWithoutRepeatingCharacters).toEqual(["ab", "ba"]);
     }));
-    it("If the string consists of lowercase and uppercase'aA', then the two  longest substrings without repeating characters are 'a' 'A'", (() => {
+
+    it("Case sensitivity matters - lower case is different then upper case", (() => {
         let substringsWithoutRepeatingCharacters = getLongestSubstringsWithoutRepeatingCharacters("aA");
-        expect(substringsWithoutRepeatingCharacters).toEqual(["a", "A"]);
+        expect(substringsWithoutRepeatingCharacters).toEqual(["aA"]);
     }));
 
     it("If string is empty (does not contain any characters), then are not  any longest substrings", (() => {

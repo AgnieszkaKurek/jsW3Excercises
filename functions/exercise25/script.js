@@ -1,16 +1,16 @@
 "use strict";
 
-function getLongestCountryName(countries) {
+function getLongestSubtrings(substringsWithUniqueCharacters) {
     let longestString = 0;
-    let longestCountriesNames = [];
-    for (let country of countries) {
-        if (country.length > longestString) {
-            longestString = country.length;
-            longestCountriesNames = [];
-            longestCountriesNames.push(country);
-        } else if (country.length === longestString) {
-            longestCountriesNames.push(country);
+    let longestSubstringWithUniqueCharacters = [];
+    for (let substring of substringsWithUniqueCharacters) {
+        if (substring.length > longestString) {
+            longestString = substring.length;
+            longestSubstringWithUniqueCharacters = [];
+            longestSubstringWithUniqueCharacters.push(substring);
+        } else if (substring.length === longestString) {
+            longestSubstringWithUniqueCharacters.push(substring);
         }
     }
-    return longestCountriesNames;
+    return longestSubstringWithUniqueCharacters;
 }
