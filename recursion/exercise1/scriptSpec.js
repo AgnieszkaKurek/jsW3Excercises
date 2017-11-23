@@ -3,7 +3,7 @@
 
 describe("Calculate the factorial of a number", (() => {
     it("Factorial of -1 is prohibited operation", (() => {
-        expect(function () { factorialOfNumber(-1); }).toThrow(new Error("Number must be natural number(including the 0)"));
+        expect(function () { factorialOfNumber(-1); }).toThrow(new Error("Number must be natural number (including 0)"));
     }));
     it("Factorial of 0 is 1", (() => {
         let factorial = factorialOfNumber(0);
@@ -21,7 +21,7 @@ describe("Calculate the factorial of a number", (() => {
         let factorial = factorialOfNumber(5);
         expect(factorial).toEqual(120);
     }));
-    it("Factorial of 1,5 is prohibited operation", (() => {
-        expect(function () { factorialOfNumber(1,5); }).toThrow(new Error("Number must be natural number(including the 0)"));
+    it("Factorial of 1.5 is prohibited operation", (() => {
+        expect(function () { factorialOfNumber(1.5); }).toThrow(new Error("Number must be natural number (including 0)"));
     }));
 }));
