@@ -1,6 +1,6 @@
 "use strict";
 
-function findGreatestCommonDivisor(number) {
+function factorialOfNumber(number) {
     if (!Number.isInteger(number) || number < 0) {
         throw new Error("Number must be natural number (including 0)");
     }
