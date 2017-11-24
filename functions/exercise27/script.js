@@ -12,14 +12,14 @@ function splitIntoWords(phrase) {
 }
 
 function getAllPalindromes(words) {
-    return words.filter(word => checkIsPhraseConsistOfLetterOnly(word) && isPalindrome(word));
+    return words.filter(word => checkIsPhraseConsistOfLetterOnly(word) && wordIsPalindrome(word));
 }
 
 function checkIsPhraseConsistOfLetterOnly(phrase) {
     return /^[a-zA-Z]+$/g.test(phrase);
 }
 
-function isPalindrome(word) {
+function wordIsPalindrome(word) {
     return word.toLowerCase() === word.toLowerCase().split("").reverse().join("");
 }
 
