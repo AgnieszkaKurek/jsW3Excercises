@@ -19,6 +19,7 @@
     "test-single-run": "karma start karma.conf.js --single-run"
   },
   "devDependencies": {
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "eslint": "^3.16.1",
     "htmlhint": "^0.9.13",
     "jasmine-core": "^2.5.2",

@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getTheIntegersInRangeExcluding*/  
+import {getTheIntegersInRangeExcluding} from './script'
 
 describe("Get the integers in range between two numbers excluding. ", (() => {
     it("The first number must be less than or equal to the second", (() => {

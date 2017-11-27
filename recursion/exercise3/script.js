@@ -1,6 +1,4 @@
-"use strict";
-
-function getTheIntegersInRangeExcluding(start, end) {
+export function getTheIntegersInRangeExcluding(start, end) {
     if (start > end) {
         throw new Error("The first number must be less than or equal to the second");
     }
