@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getAmountOfCoins*/
+import { getAmountOfCoins } from './script';
 
 describe("Getting  amount of coins ", function () {
      it("in the amount of 3 are 2, 1", function () {

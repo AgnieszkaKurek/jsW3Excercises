@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals countTheNumberOfVowels*/
+import { countTheNumberOfVowels } from './script';
 
 describe("Counting the number of vowels within the string", function () {
     it("in string 'pig' is 1 vowel ", function () {

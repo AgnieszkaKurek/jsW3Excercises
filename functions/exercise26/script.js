@@ -1,7 +1,6 @@
-"use strict";
-/*globals getLongestSubtrings*/
+import {getLongestSubtrings} from './../exercise25/script';
 
-function getLongestSubstringsWithoutRepeatingCharacters(phrase) {
+export function getLongestSubstringsWithoutRepeatingCharacters(phrase) {
     let substrings = getAllSubstrings(phrase);
     let substringsWithUniqueCharacters = getSubstringsWithUniqueCharacters(substrings);
     return getLongestSubtrings(substringsWithUniqueCharacters);

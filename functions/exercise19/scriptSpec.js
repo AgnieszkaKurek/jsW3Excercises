@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals returnElementsLargerThanNumber*/
+import { returnElementsLargerThanNumber } from './script';
 
 describe("Returning array elements larger than a number", function () {
     it("empty array aren't any elements  larger than referenc number", function () {

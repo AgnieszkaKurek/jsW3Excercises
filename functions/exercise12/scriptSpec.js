@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals isPerfectNumber*/
+import { isPerfectNumber } from './script';
 
 describe("Checking if number is perfect number:", function () {
     it("number 0 is not perfect number", function () {

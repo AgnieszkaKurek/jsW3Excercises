@@ -1,6 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getLongestSubstringsWithoutRepeatingCharacters*/
-/*globals hasUniqueCharacters*/
+import {getLongestSubstringsWithoutRepeatingCharacters} from './script';
 
 describe(" Find longest substring in a given a string without repeating characters", (() => {
 

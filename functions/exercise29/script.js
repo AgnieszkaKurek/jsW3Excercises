@@ -1,5 +1,3 @@
-"use strict";
-
-function getTheFunctionName(callbackFunction) {
+export function getTheFunctionName(callbackFunction) {
     return callbackFunction.name;
 }

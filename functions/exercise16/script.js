@@ -1,6 +1,4 @@
-"use strict";
-
-function getUniqueCharactersFromString(phrase) {
+export function getUniqueCharactersFromString(phrase) {
     var uniqueChars = "";
     for (var i = 0; i < phrase.length; i++) {
         var currentChar = phrase[i];

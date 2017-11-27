@@ -1,6 +1,4 @@
-"use strict";
-
-function getAmountOfCoins(amount) {
+export function getAmountOfCoins(amount) {
     var denominations = [25, 10, 5, 2, 1];
     var coins = [];
     var curentDenominationsIndex = 0;

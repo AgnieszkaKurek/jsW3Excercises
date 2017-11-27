@@ -1,6 +1,4 @@
-"use strict";
-
-function getLongestSubtrings(substringsWithUniqueCharacters) {
+export function getLongestSubtrings(substringsWithUniqueCharacters) {
     let longestString = 0;
     let longestSubstringWithUniqueCharacters = [];
     for (let substring of substringsWithUniqueCharacters) {

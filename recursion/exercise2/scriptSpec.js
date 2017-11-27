@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals findGreatestCommonDivisor*/
+import {findGreatestCommonDivisor} from './script';
 
 describe("Find the greatest common divisor of two positive numbers", (() => {
     it("It is not possible find  common divisor of 0 and 0", (() => {

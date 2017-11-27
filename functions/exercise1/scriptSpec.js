@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals revertNumber*/
+import {revertNumber} from './script';
 
 describe("Revert number", function () {
     it("from 5445671 to 1765445", function () {

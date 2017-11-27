@@ -3,10 +3,12 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      'recursion/exercise3/*.js',
+      'recursion/**/*.js',
+      'functions/**/*.js',
     ],
     preprocessors: {
-      'recursion/exercise3/*.js': ['babel'],
+      'recursion/**/*.js': ['babel'],
+      'functions/**/*.js': ['babel'],
     },
     babelPreprocessor: {
       options: {

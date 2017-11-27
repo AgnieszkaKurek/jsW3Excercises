@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals exponentiation*/
+import { exponentiation } from './script';
 
 describe("Exponentiation of number", function () {
     it("1 raised to the power of 0  is 1", function () {

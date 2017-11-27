@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getAllSubStringsOf*/
+import { getAllSubStringsOf } from './script';
 
 describe("Getting all substrings:", function () {
     it("empty phrase has 0 substrings", function () {
@@ -17,13 +16,13 @@ describe("Getting all substrings:", function () {
     it("two characters have 3 substrings", function () {
         var substrings = getAllSubStringsOf("ab");
         expect(substrings).toEqual(["a", "ab", "b"]);
-    }); 
+    });
     it("three characters have 6 substrings", function () {
         var substrings = getAllSubStringsOf("dog");
-        expect(substrings).toEqual(["d", "do","dog","o","og","g"]);
+        expect(substrings).toEqual(["d", "do", "dog", "o", "og", "g"]);
     });
     it("four characters have 10 substrings", function () {
         var substrings = getAllSubStringsOf("home");
-        expect(substrings).toEqual(["h","ho","hom","home","o","om","ome","m","me","e"]);
+        expect(substrings).toEqual(["h", "ho", "hom", "home", "o", "om", "ome", "m", "me", "e"]);
     });
 });

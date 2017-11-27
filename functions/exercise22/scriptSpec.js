@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals countNumberOccurrencesOfSpecifiedLetterWithinString*/
+import { countNumberOccurrencesOfSpecifiedLetterWithinString } from './script';
 
 describe("Count the number of occurrences of the specified letter within the string", (() => {
 

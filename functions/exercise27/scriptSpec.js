@@ -1,6 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getLongestPalindromeInPhrase*/
-
+import {getLongestPalindromeInPhrase} from './script';
 
 describe("Get longest palindrome in a given phrase", (() => {
     it("Empty phrase gives an empty palindrome", (() => {

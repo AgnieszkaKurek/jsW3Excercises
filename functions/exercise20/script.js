@@ -1,6 +1,4 @@
-"use strict";
-
-function getRandomChars(specifiedLength) {
+export function getRandomChars(specifiedLength) {
     const stringCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     const stringCharactersLength = stringCharacters.length;
     let randomCharacters = "";

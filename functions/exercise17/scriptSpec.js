@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getQuantityOfLetters*/
+import { getQuantityOfLetters } from './script';
 
 describe("Getting the quantity of occurrences of each letter in a phrase", function () {
     it("white space ' ' isn't  letter - isn't taken into account", function () {

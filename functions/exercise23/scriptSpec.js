@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals findFirstNotRepeatedCharacter*/
+import { findFirstNotRepeatedCharacter } from './script';
 
 describe("Find the first not repeated character in string", (() => {
 

@@ -1,6 +1,4 @@
-"use strict";
-
-function isPrimeNumber(number) {
+export function isPrimeNumber(number) {
     if (number === 1) {
         return false;
     }

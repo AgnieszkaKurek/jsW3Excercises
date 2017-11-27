@@ -1,6 +1,4 @@
-"use strict";
-
-function getLongestPalindromeInPhrase(phrase) {
+export function getLongestPalindromeInPhrase(phrase) {
     let words = splitIntoWords(phrase);
     let palindromes = getAllPalindromes(words);
     let longestPalindromes = getLongestPalindromes(palindromes);

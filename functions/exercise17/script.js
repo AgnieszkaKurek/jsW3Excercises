@@ -1,6 +1,4 @@
-"use strict";
-
-function getQuantityOfLetters(phrase) {
+export function getQuantityOfLetters(phrase) {
     var quantityOfLetters = [];
     for (let character of phrase) {
         character = character.toLowerCase();

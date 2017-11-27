@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals isPrimeNumber*/
+import { isPrimeNumber } from './script';
 
 describe("Checking if number is prime:", function () {
     it("number '1' isn' a prime", function () {

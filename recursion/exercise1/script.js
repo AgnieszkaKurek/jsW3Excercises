@@ -1,6 +1,4 @@
-"use strict";
-
-function factorialOfNumber(number) {
+export function factorialOfNumber(number) {
     if (!Number.isInteger(number) || number < 0) {
         throw new Error("Number must be natural number (including 0)");
     }

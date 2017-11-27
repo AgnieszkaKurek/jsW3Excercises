@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals isPalindrome*/
+import {isPalindrome} from './script';
 
 describe("Checking if word is palindrome: ", function () {
     it("phrase 'tenet' is a palindrome", function () {

@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getUniqueCharactersFromString*/
+import { getUniqueCharactersFromString } from './script';
 
 describe("Extract unique characters from a string", function () {
     it("string 'pig' give 'pig' uniqe characters", function () {

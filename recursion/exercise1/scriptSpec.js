@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals factorialOfNumber*/
+import {factorialOfNumber} from './script';
 
 describe("Calculate the factorial of a number", (() => {
     it("Factorial of -1 is prohibited operation", (() => {

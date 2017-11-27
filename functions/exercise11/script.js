@@ -1,6 +1,4 @@
-"use strict";
-
-function getSecondLowestAndSecondGreatestNumbers(numericalSequence) {
+export function getSecondLowestAndSecondGreatestNumbers(numericalSequence) {
     var smallest;
     var secondSmallest;
     var largest;

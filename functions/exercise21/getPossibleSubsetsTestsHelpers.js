@@ -18,7 +18,7 @@ function arraysHaveTheSameItems(fistArray, secondArray) {
             firstArrayContainsAllItemsOfSecodArray(secondArray, fistArray);
 }
 
-function arrayOfArraysHaveTheSameItems(firstArrayOfArrays, secondArrayOfArrays) {
+export function arrayOfArraysHaveTheSameItems(firstArrayOfArrays, secondArrayOfArrays) {
     return  firstArrayOfArrays.length === secondArrayOfArrays.length &&
             firstArrayOArraysContainsAllItemsOfSecodArrayOfArrays(firstArrayOfArrays, secondArrayOfArrays) &&
             firstArrayOArraysContainsAllItemsOfSecodArrayOfArrays(secondArrayOfArrays, firstArrayOfArrays);

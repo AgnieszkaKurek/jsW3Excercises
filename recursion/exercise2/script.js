@@ -1,6 +1,4 @@
-"use strict";
-
-function findGreatestCommonDivisor(firstNumber, secondNumber) {
+export function findGreatestCommonDivisor(firstNumber, secondNumber) {
     validateIfNumberIsPositiveInteger(firstNumber);
     validateIfNumberIsPositiveInteger(secondNumber);
     while (secondNumber != 0) {

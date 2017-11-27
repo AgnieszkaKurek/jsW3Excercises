@@ -1,5 +1,3 @@
-"use strict";
-
-function getDataType(value) {
+export function getDataType(value) {
     return typeof value;
 }

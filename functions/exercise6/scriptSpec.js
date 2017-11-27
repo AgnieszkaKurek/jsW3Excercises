@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals findTheLongestWordWithinTheSentence*/
+import { findTheLongestWordWithinTheSentence } from './script';
 
 describe("Finding the longest word within the sentence", function () {
     it("empty string '' gives  empty string ''", function () {

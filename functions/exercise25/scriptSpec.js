@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getLongestSubtrings*/
+import {getLongestSubtrings} from './script';
 
 describe("Find country with the longest name from given set of countries", (() => {
 

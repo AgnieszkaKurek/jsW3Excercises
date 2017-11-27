@@ -1,6 +1,4 @@
-"use strict";
-
-function findTheLongestWordWithinTheSentence(sentence) {
+export function findTheLongestWordWithinTheSentence(sentence) {
     var words = sentence.split(" ");
     var theLongestWord = words[0];
 

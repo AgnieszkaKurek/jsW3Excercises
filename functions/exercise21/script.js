@@ -1,6 +1,4 @@
-"use strict";
-
-function getPossibleSubsets(set, numberOfItems) {
+export function getPossibleSubsets(set, numberOfItems) {
     if (numberOfItems === 2) {
         let subsets = [];
         for (let i = 0; i < set.length; ++i) {

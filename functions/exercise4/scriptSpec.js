@@ -1,6 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals validateAsPhraseConsistsOfLettersOnly*/
-/*globals sortLettersInThePhrase*/
+import { validateAsPhraseConsistsOfLettersOnly, sortLettersInThePhrase } from './script';
 
 
 describe("Check if phrase consists of letters only:", function () {

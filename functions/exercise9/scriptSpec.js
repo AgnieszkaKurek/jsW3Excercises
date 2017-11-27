@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals getDataType*/
+import { getDataType } from './script';
 
 describe("Getting data type", function () {
     it("variable 1 is number", function () {
