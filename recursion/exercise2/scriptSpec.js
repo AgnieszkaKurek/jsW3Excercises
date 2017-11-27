@@ -3,19 +3,19 @@
 
 describe("Find the greatest common divisor of two positive numbers", (() => {
     it("It is not possible find  common divisor of 0 and 0", (() => {
-        expect(() => findGreatestCommonDivisor(0, 0)).toThrow(new Error("Number must be positive integers"));
+        expect(() => findGreatestCommonDivisor(0, 0)).toThrow(new Error("Both numbers must be positive integers"));
     }));
 
     it("It is not possible find  common divisor of 0 and 7", (() => {
-        expect(() => findGreatestCommonDivisor(0, 0)).toThrow(new Error("Number must be positive integers"));
+        expect(() => findGreatestCommonDivisor(0, 7)).toThrow(new Error("Both numbers must be positive integers"));
     }));
 
     it("It is not possible find  common divisor of 4 and 1.5", (() => {
-        expect(() => findGreatestCommonDivisor(0, 0)).toThrow(new Error("Number must be positive integers"));
+        expect(() => findGreatestCommonDivisor(4, 1.5)).toThrow(new Error("Both numbers must be positive integers"));
     }));
 
     it("It is not possible find  common divisor of -1 and 3", (() => {
-        expect(() => findGreatestCommonDivisor(0, 0)).toThrow(new Error("Number must be positive integers"));
+        expect(() => findGreatestCommonDivisor(-1, 3)).toThrow(new Error("Both numbers must be positive integers"));
     }));
 
     it("Greatest common divisor of 1 and 5 is 1", (() => {
@@ -27,5 +27,4 @@ describe("Find the greatest common divisor of two positive numbers", (() => {
         let greatestCommonDivisor = findGreatestCommonDivisor(25, 10);
         expect(greatestCommonDivisor).toEqual(5);
     }));
-
 }));
