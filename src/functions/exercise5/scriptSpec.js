@@ -1,5 +1,3 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals convertWordFirstLetterIntoUpperCase*/
 import { convertWordFirstLetterIntoUpperCase } from './script';
 
 describe("Converting the first letter of each word in the string into upper case", function () {
