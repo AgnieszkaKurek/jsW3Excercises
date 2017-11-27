@@ -1,8 +1,0 @@
-{
-  "name": "jsw3exercises",
-  "dependencies": {},
-  "globalDependencies": {
-    "jasmine": "registry:dt/jasmine#2.5.0+20170207112528",
-    "jasmine-matchers": "registry:dt/jasmine-matchers#0.2.1+20170207112528"
-  }
-}
