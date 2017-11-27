@@ -1,4 +1,7 @@
 {
+    "parserOptions": {
+        "sourceType": "module"
+    },
     "env": {
         "browser": true,
         "es6": true,
@@ -13,6 +16,7 @@
             }
         ],
         "no-console": "off",
+        "no-compare-neg-zero": "off",
         "linebreak-style": [
             "error",
             "windows"
