@@ -1,5 +1,3 @@
-"use strict";
-
 function formatAsTwoDigits(timeUnit) {
     return (timeUnit < 10) ? `0${timeUnit}` : timeUnit;
 }
@@ -30,8 +28,11 @@ function formatShortDate(date) {
 }
 
 function formatAndDisplayDate(date, id, formatFunction) {
-    var fdate = formatFunction(date);
-    document.getElementById(id).innerHTML = fdate;
+    let fdate = formatFunction(date);
+    let elementToDisplayContext = document.getElementById(id);
+    if (elementToDisplayContext != null) {
+        elementToDisplayContext.innerHTML = fdate;
+    }
 }
 
 formatAndDisplayDate(new Date(1986, 4, 2, 5, 7, 6), "Date1", formatShortDate);

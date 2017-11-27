@@ -1,5 +1,3 @@
-"use strict";
-
 function performCalculate(calculate) {
     var number1 = document.getElementById("number1").value;
     var number2 = document.getElementById("number2").value;
@@ -19,10 +17,10 @@ function divide(number1, number2) {
     }
 }
 
-function calculateMultiplication() {
+export function calculateMultiplication() {
     performCalculate(multiplay);
 }
 
-function calculateDivision() {
+export function calculateDivision() {
     performCalculate(divide);
 }

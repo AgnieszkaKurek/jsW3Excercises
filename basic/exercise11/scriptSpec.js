@@ -1,6 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals convertTemperatureFromCelsiusToFahrenheit*/
-/*globals convertTemperatureFromFahrenheitToCelsius*/
+import {convertTemperatureFromCelsiusToFahrenheit, convertTemperatureFromFahrenheitToCelsius} from './script';
 
 describe("Convert temperature from Celsius to Fahrenheit:", function () {
     it("0 degrees Celsius is 32 degrees Fahrenheit", function () {

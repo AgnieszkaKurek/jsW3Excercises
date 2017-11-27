@@ -5,10 +5,12 @@ module.exports = function (config) {
     files: [
       'recursion/**/*.js',
       'functions/**/*.js',
+      'basic/**/*.js',
     ],
     preprocessors: {
       'recursion/**/*.js': ['babel'],
       'functions/**/*.js': ['babel'],
+      'basic/**/*.js': ['babel'],
     },
     babelPreprocessor: {
       options: {

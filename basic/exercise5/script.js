@@ -1,10 +1,11 @@
-"use strict";
+let textAnimation = document.getElementById("textAnimation");
+if (textAnimation != null) {
+    var text = document.getElementById("textAnimation").innerHTML;
+    var characters = text.split("");
 
-var text = document.getElementById("textAnimation").innerHTML;
-var characters = text.split("");
-
-setInterval(function () {
-    var firstCharacter = characters.shift();
-    characters.push(firstCharacter);
-    document.getElementById("textAnimation").innerHTML = characters.join("");
-}, 500);
+    setInterval(function () {
+        var firstCharacter = characters.shift();
+        characters.push(firstCharacter);
+        textAnimation.innerHTML = characters.join("");
+    }, 500);
+}

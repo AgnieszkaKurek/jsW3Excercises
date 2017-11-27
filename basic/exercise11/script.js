@@ -1,11 +1,9 @@
-"use strict";
-
-function convertTemperatureFromCelsiusToFahrenheit(degreesCelsius) {
+export function convertTemperatureFromCelsiusToFahrenheit(degreesCelsius) {
     var degreesFahrenheit = degreesCelsius * 9 / 5 + 32;
     return degreesFahrenheit;
 }
 
-function convertTemperatureFromFahrenheitToCelsius(degreesFahrenheit) {
+export function convertTemperatureFromFahrenheitToCelsius(degreesFahrenheit) {
     var degreesCelsius = (degreesFahrenheit - 32) * 5 / 9;
     return degreesCelsius;
 }

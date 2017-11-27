@@ -8,12 +8,15 @@ export function getAllSubStringsOf(text) {
     return substrings;
 }
 
-function showSubstrings() {
+export function showSubstrings() {
     var text = document.getElementById("text").value;
     var substrings = getAllSubStringsOf(text);
     var formattedSubstrings = "";
     for (var i = 0; i < substrings.length; i++) {
         formattedSubstrings += `<div>${i + 1} - ${substrings[i]}</div>`;
     }
-    document.getElementById("substrings").innerHTML = formattedSubstrings;
+    let item = document.getElementById("substrings");
+    if (item != null) {
+        item.innerHTML = formattedSubstrings;
+    }
 }

@@ -1,5 +1,3 @@
-"use strict";
-
 function validateSide(side) {
     if (isNaN(side)) {
         throw new TypeError("All sides should be number.");
@@ -30,4 +28,7 @@ function triangleArea(side1, side2, side3) {
     return triangleAreaMath;
 }
 
-document.getElementById("triangle").innerHTML = triangleArea(5, 6, 7);
+let triangle = document.getElementById("triangle");
+if (triangle!=null){
+    document.getElementById("triangle").innerHTML = triangleArea(5, 6, 7);
+}

@@ -9,7 +9,7 @@ export function getRandomChars(specifiedLength) {
     return randomCharacters;
 }
 
-function showRandomCharactersOfSpecifiedLength() {
+export function showRandomCharactersOfSpecifiedLength() {
     let lengthOfStringsToBeGenerated = document.getElementById("lengthOfStringsToBeGenerated").value;
     let numberOfStringsToBeGenerated = document.getElementById("numberOfStringsToBeGenerated").value;
     let randomCharacters = [];
@@ -17,5 +17,8 @@ function showRandomCharactersOfSpecifiedLength() {
         randomCharacters.push(getRandomChars(lengthOfStringsToBeGenerated));
     }
     let result = randomCharacters.join("<br /> ");
-    document.getElementById("result").innerHTML = result;
+    let item = document.getElementById("result");
+    if (item != null) {
+        item.innerHTML = result;
+    }
 }

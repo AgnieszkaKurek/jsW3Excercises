@@ -1,5 +1,4 @@
-/// <reference path="../../typings/globals/jasmine/index.d.ts" />
-/*globals isLeapYear*/
+import {isLeapYear} from './script';
 
 describe("Checking if year is leap: ", function(){
     it("year 1996 is a leap year", function(){

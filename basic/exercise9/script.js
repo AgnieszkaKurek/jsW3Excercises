@@ -1,5 +1,3 @@
-"use strict";
-
 function getNumberOfDaysUntilNextChristmas(date) {
     var oneDayInMiliseconds = 1000 * 60 * 60 * 24;
     var decemberIndex = 11;
@@ -15,7 +13,10 @@ function getNumberOfDaysUntilNextChristmas(date) {
 function displayNumberOfDaysUntilNextChristmas(date, id) {
     var numberOfDaysUntilNextChristmas = getNumberOfDaysUntilNextChristmas(date);
     var informationAboutNuberOfDaysFromDateToNextChrismas = `From ${date} is ${numberOfDaysUntilNextChristmas} days to next Christmas.`;
-    document.getElementById(id).innerHTML = informationAboutNuberOfDaysFromDateToNextChrismas;
+    let item = document.getElementById(id);
+    if (item!=null){
+        item.innerHTML = informationAboutNuberOfDaysFromDateToNextChrismas;
+    }
 }
 
 displayNumberOfDaysUntilNextChristmas(new Date(), "timeToNextChristmas1");

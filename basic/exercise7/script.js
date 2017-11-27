@@ -1,5 +1,3 @@
-"use strict";
-
 function findAllYearStartingFromSunday(startYear, endYear) {
     var years = [];
     for (var year = startYear; year <= endYear; year++) {
