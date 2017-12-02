@@ -1,22 +1,25 @@
 import {
-    checkIfNumberIsHappy
+    isHappyNumber
 } from './script';
 
-describe("Check if number is happy (Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.)", (() => {
+describe("Check if number is happy: ", (() => {
     it("13 is happy number", (() => {
-        let happyNumber = checkIfNumberIsHappy(13);
-        expect(happyNumber).toEqual();
+        let happyNumber = isHappyNumber(13);
+        expect(happyNumber).toBe(true);
     }));
 
-    it("622 is happy number", (() => {
-        let happyNumber = checkIfNumberIsHappy(622);
-        expect(happyNumber).toEqual();
+    it("622 is a happy number", (() => {
+        let happyNumber = isHappyNumber(622);
+        expect(happyNumber).toBe(true);
     }));
 
-    it("7528 isn't happy number", (() => {
-        let happyNumber = checkIfNumberIsHappy(7528);
-        expect(happyNumber).toEqual();
+    it("14 isn't a happy number", (() => {
+        let happyNumber = isHappyNumber(14);
+        expect(happyNumber).toBe(false);
+    }));
+
+    it("7528 isn't a happy number", (() => {
+        let happyNumber = isHappyNumber(7528);
+        expect(happyNumber).toBe(false);
     }));
 }));
-
-
