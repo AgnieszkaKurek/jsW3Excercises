@@ -3,18 +3,17 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      'src/**/*.js',
+      {pattern: 'src/**/*Spec.js', watched: true},
     ],
     preprocessors: {
-      'src/**/*.js': ['babel'],
+      'src/**/*Spec.js': ['webpack']
     },
-    babelPreprocessor: {
-      options: {
-        "presets": ["es2015"],
-        "plugins": ["transform-es2015-modules-umd"]
-      }
+    webpack: {
     },
-    client:{
+    webpackMiddleware: {
+      stats: 'errors-only'
+    },
+    client: {
       clearContext: false
     },
     exclude: [],
