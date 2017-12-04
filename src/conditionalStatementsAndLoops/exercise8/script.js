@@ -20,7 +20,7 @@ function getSumOfSquares(n) {
     return sumOfSquares;
 }
 
-function splitIntoDigits(n) {
+export function splitIntoDigits(n) {
     let digits = [];
     let stringifiedNumber = n.toString();
     for (const item of stringifiedNumber) {
