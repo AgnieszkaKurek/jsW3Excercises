@@ -1,9 +1,9 @@
 export function findTheMostFrequentItems(array) {
-    let mostFrequentItems = [];
+    let itemsFrequency = [];
     for (const elem of array) {
-        let items = mostFrequentItems.filter(item => item.item === elem);
+        let items = itemsFrequency.filter(item => item.item === elem);
         if (items.length === 0) {
-            mostFrequentItems.push({
+            itemsFrequency.push({
                 item: elem,
                 quantity: 1
             });
@@ -11,6 +11,9 @@ export function findTheMostFrequentItems(array) {
             items[0].quantity++;
         }
     }
-    let maxQuantity = Math.max(...mostFrequentItems.map(o => o.quantity));
-    return mostFrequentItems.filter(item => item.quantity === maxQuantity);
+    let maxQuantity = itemsFrequency.length === 0 ? 0: Math.max(...itemsFrequency.map(o => o.quantity));
+    return {
+        quantity: maxQuantity,
+        items: itemsFrequency.filter(elem => elem.quantity === maxQuantity).map(elem => elem.item)
+    };
 }
