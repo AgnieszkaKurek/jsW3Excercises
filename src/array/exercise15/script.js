@@ -1,15 +1,24 @@
-export function getOrdinalNumbersColorsPosition(colors) {
-    let ordinalNumbersColorsPosition =[];
-    let suffixes = ["th","st","nd","rd"];
-    let counter= 1;
+export function getOrdinalElementsPosition(colors) {
+    let ordinalNumbersColorsPosition = [];
+    let counter = 1;
     for (const item of colors) {
-        if(counter < 4 ){
-        ordinalNumbersColorsPosition.push(`${counter}${suffixes[counter]} choice is ${item}`); 
-        }
-        else{
-            ordinalNumbersColorsPosition.push(`${counter}${suffixes[0]} choice is ${item}`);
-        }
-        counter ++;
+        const suffix = getOrderSuffix(counter);
+        ordinalNumbersColorsPosition.push(`${counter}${suffix} choice is ${item}`);
+        counter++;
     }
     return ordinalNumbersColorsPosition;
+}
+
+function getOrderSuffix(num) {
+    if (isExceptionForTenthDigitOfNumber(num)) return "th";
+    const restFromDivisionBy10 = num % 10;
+    if (restFromDivisionBy10 === 1) return "st";
+    if (restFromDivisionBy10 === 2) return "nd";
+    if (restFromDivisionBy10 === 3) return "rd";
+    return "th";
+}
+
+function isExceptionForTenthDigitOfNumber(num) {
+    const restFromDivisionBy100 = num % 100;
+    return restFromDivisionBy100 >= 11 && restFromDivisionBy100 <= 14;
 }
