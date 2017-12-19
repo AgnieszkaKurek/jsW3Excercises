@@ -11,12 +11,12 @@ describe(" Find duplicate values in a array.:", (() => {
         let duplicateValues = findDuplicateValues([1, 1]);
         expect(duplicateValues).toEqual([1]);
     });
-    it("if in thee array are dupliated and single values , return duplicate values", () => {
+    it("if in thee array are duplicated and single values , return duplicate values", () => {
         let duplicateValues = findDuplicateValues([1, 1, 2, 3, 3]);
         expect(duplicateValues).toEqual([1, 3]);
     });
-    it("if elements are of different types, return all dublicate elements regardless of type", () => {
-        let duplicateValues = findDuplicateValues([1, "ab", 1, 3, "c", "c", 3, "ef"]);
-        expect(duplicateValues).toEqual([1, 3, "c"]);
-    });  
+    it("if elements are of different types, return all duplicate values regardless of type", () => {
+        let duplicateValues = findDuplicateValues(["a", 12, "bb", "bb", "abc", "a", 12, 13]);
+        expect(duplicateValues).toEqual([ "bb", "a" , 12]);
+    });
 }));
