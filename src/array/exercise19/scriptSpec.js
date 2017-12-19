@@ -19,7 +19,7 @@ describe("Compute the sum of each individual index value from the given arrays: 
     });
     it("if we add two elements array and five elements array, the result will be an five elements array", () => {
         let sumOfEachElemValue  =  computSumOfEachIndividualElemValue([1, 14], [1, 8, 9, 12, 15]);
-        expect(sumOfEachElemValue).toEqual();
+        expect(sumOfEachElemValue).toEqual([2, 22, 9, 12, 15]);
     });
     it("if we add five elements array and six elements array, the result will be an six elements array", () => {
         let sumOfEachElemValue  =  computSumOfEachIndividualElemValue([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]);
