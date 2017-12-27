@@ -1,16 +1,8 @@
-export function computeTheUnionOfTwoArrays(arrayA, arrayB) {
-    let allElemArrays = arrayA.concat(arrayB);
-    let notSortElem = removeDableElemArray(allElemArrays);
-    let unionArrays = sortElemArray(notSortElem);
-    return unionArrays;
-}
+import { removeDuplicateItems } from '../exercise14/script.js';
+import { sortNumbers } from '../../recursion/exercise9/script.js';
 
-function removeDableElemArray(arr) {
-    return arr.filter((elem, index, array) =>
-        array.indexOf(elem) === index
-    );
-}
-
-function sortElemArray(arr) {
-    return arr.sort((a, b) => a - b);
+export function mergeAndSort(arrayA, arrayB) {
+    let allItems = arrayA.concat(arrayB);
+    let uniqueItems = removeDuplicateItems(allItems);
+    return sortNumbers(uniqueItems);
 }
