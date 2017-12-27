@@ -16,8 +16,11 @@ describe("Find pairs of items from a given array whose sum equals a specific tar
     });
     it("if there are two matching pairs, we should return both of them", () => {
         let result = getPositionOfPairsWithSpecifiedSum([50, 10, 20, 60, 30, 40], 50);
-        expect(result.size).toEqual(2);
-        expect(result.has([2, 6])).toEqual(true);
-        expect(result.has([3, 5])).toEqual(true);
+        expect(result).toEqual(new Set(
+            [
+                { formerPosition: 2, latterPosition: 6 },
+                { formerPosition: 3, latterPosition: 5 }
+            ]
+        ));
     });
 }));
