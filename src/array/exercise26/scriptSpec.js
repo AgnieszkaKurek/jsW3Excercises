@@ -1,23 +1,23 @@
 import {
-    findPairOfItemsWhoesSumEqualsTargetNum
+    getPositionOfPairsWithSpecifiedSum
 } from './script';
 
-describe("Find a pair of items from an given array whose sum equals a specific target number: ", (() => {
-    it("if is one element in the array and this element is equal target number, result is first items", () => {
-        let result  = findPairOfItemsWhoesSumEqualsTargetNum([20], 20);
-        expect(result).toEqual(1);
+describe("Find pairs of items from a given array whose sum equals a specific target number: ", (() => {
+    it("positions are counted from 1", () => {
+        let result = getPositionOfPairsWithSpecifiedSum([10, 20], 30);
+        expect(result).toEqual(new Set([{ formerPosition: 1, latterPosition: 2 }]));
     });
-    it("if are two element in the array and sum this elements is equal target number, result is first and second items", () => {
-        let result = findPairOfItemsWhoesSumEqualsTargetNum([10,  10], 20);
-        expect(result).toEqual(1,3);
+    it("array should have at least 2 items", () => {
+        expect(() => getPositionOfPairsWithSpecifiedSum([20], 20)).toThrow(new Error("Array should have at least 2 items"));
     });
-    it("if are three element in the array and sum second and third elements is equal target number, result is second and third items", () => {
-        let result = findPairOfItemsWhoesSumEqualsTargetNum([10, 5, 10], 20);
-        expect(result).toEqual(1,3);
+    it("if there is no pair with appropriate sum, then return empty set", () => {
+        let result = getPositionOfPairsWithSpecifiedSum([10, 20, 30, 40, 50], 15);
+        expect(result).toEqual(new Set());
     });
-    it("if are several element in the array and sum two elements closest to each other is equal target number, result is tems  this elements ", () => {
-        let result  = ([10,20,10,40,50,60,70], 50);
-        expect(result).toEqual([3,4]);
+    it("if there are two matching pairs, we should return both of them", () => {
+        let result = getPositionOfPairsWithSpecifiedSum([50, 10, 20, 60, 30, 40], 50);
+        expect(result.size).toEqual(2);
+        expect(result.has([2, 6])).toEqual(true);
+        expect(result.has([3, 5])).toEqual(true);
     });
-    
 }));
