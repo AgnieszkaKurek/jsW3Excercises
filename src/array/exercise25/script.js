@@ -1,4 +1,4 @@
-export function sortByTitleValue(books){
+export function sortByTitle(books) {
     return books.sort((a, b) => a.title > b.title);
 }
 
