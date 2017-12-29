@@ -25,6 +25,5 @@ module.exports = function (config) {
     browsers: ['Chrome'],
     singleRun: false,
     concurrency: Infinity,
-    autoWatchBatchDelay: 5000
   })
 }
