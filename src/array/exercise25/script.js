@@ -4,6 +4,7 @@ export class Book {
         this.title = title;
         this.libraryId = libraryId;
     }
+
     compareByTitle(another) {
         return this.title > another.title;
     }
