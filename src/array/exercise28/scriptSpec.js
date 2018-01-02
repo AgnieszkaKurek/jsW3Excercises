@@ -19,7 +19,7 @@ describe("Find the longest common starting substring in a set of strings: ", (()
         let result = longestCommonStartingSubstring(["ab", "cd", "abb"]);
         expect(result).toEqual("");
     });
-    it("if many substrings provided and they all start with the same letter, this letter is the longest substring", () => {
+    it("if many substrings are provided and they all start with the same letter and have different second letter, this letter is the longest substring", () => {
         let result = longestCommonStartingSubstring(["bald", "be", "beer", "bear"]);
         expect(result).toEqual("b");
     });
