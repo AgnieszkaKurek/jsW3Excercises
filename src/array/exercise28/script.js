@@ -2,7 +2,7 @@ export function longestCommonStartingSubstring(stringArray) {
     if (stringArray.length < 1) {
         return "";
     }
-    let sortedStringArray = stringArray.concat().sort();
+    let sortedStringArray = stringArray.sort();
     const firstString = sortedStringArray[0];
     const lastString = sortedStringArray[sortedStringArray.length - 1];
     let firstStringLenght = firstString.length;
