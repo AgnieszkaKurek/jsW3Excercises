@@ -14,7 +14,7 @@ describe("Remove a specific element from an array:", (() => {
     });
     it("if neither items in array are specific element, expected result is been array having all items orginal array", () => {
         let arrayWithoutSpecificElem = removeSpecificElemFromArray([1, 2, 3], 4);
-        expect(arrayWithoutSpecificElem).toEqual([]);
+        expect(arrayWithoutSpecificElem).toEqual([1, 2, 3]);
     });
     it("if some items are specific element, expected result is been array without this items ", () => {
         let arrayWithoutSpecificElem = removeSpecificElemFromArray([2, 5, 9, 6], 5);
