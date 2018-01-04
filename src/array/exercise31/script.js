@@ -1,6 +1,4 @@
-export function removeSpecificElemFromArray(arr, specificElem) {
-
-    return arr.filter((item) => item !== specificElem
-    );
+export function removeElemFromArray(arr, specificElem) {
+    return arr.filter((item) => item !== specificElem);
 }
 
