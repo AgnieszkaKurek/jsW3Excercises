@@ -1,5 +1,5 @@
 import {
-    compareDates 
+    compareDates
 } from './script';
 
 describe("Compare two dates (i.e. greater than, less than or equal to):", (() => {
