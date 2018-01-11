@@ -3,7 +3,7 @@ import {
 } from './script';
 
 describe("Get the number of days in a month:", (() => {
-    it("January has 31 days ", () => {
+    it("January has 31 days", () => {
         let numberOfDays = getNumberOfDaysInMonth(1, 2012);
         expect(numberOfDays).toEqual(31);
     });
