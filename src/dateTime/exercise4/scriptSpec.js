@@ -3,16 +3,16 @@ import {
 } from './script';
 
 describe("Get the month name from a particular date:", (() => {
-    it("eleventh month is October", () => {
-        let monthName = getTheMonthNameFromDate("10/11/2009");
-        expect(monthName).toEqual("October");
+    it("eleventh month is November", () => {
+        let monthName = getTheMonthNameFromDate("2009/11/10");
+        expect(monthName).toEqual("November");
     });
     it("fourth month is April", () => {
-        let monthName = getTheMonthNameFromDate("20/04/1986");
+        let monthName = getTheMonthNameFromDate("1986/04/20");
         expect(monthName).toEqual("April");
     });
     it("first month is January", () => {
-        let monthName = getTheMonthNameFromDate("05/01/2018");
+        let monthName = getTheMonthNameFromDate("2018/01/05");
         expect(monthName).toEqual("January");
     });
 })); 
