@@ -1,5 +1,3 @@
-export function getTheMonthNameFromDate(date) {
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let month = date.getMonth();
-    return months[month];
+export function getTheMonthNameFromDate(date, locale="en-us") {
+    return date.toLocaleString(locale, { month: "long" });
 }
