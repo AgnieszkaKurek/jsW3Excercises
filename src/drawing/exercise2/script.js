@@ -1,7 +1,7 @@
-const canvasElem=document.getElementById("canvas");
-var ctx=canvasElem.getContext("2d");
+const canvasElem = document.getElementById("canvas");
+var ctx = canvasElem.getContext("2d");
 ctx.beginPath();
-ctx.arc(100,75,50,0,2*Math.PI);
+ctx.arc(100, 75, 50, 0, 2 * Math.PI);
 ctx.lineWidth = 5;
 ctx.strokeStyle = '#FF0000';
 ctx.stroke();
