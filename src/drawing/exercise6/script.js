@@ -1,39 +1,26 @@
 const canvasElem = document.getElementById("canvas");
-const ctx = canvasElem.getContext("2d");
+if (canvasElem.getContext) {
+    const x = 25;
+    const y = 25;
+    const r = 20;
+    const startColorPattern = 300;
+    const endColorPattern = 10;
+    const steps = 6;
+    const ctx = canvasElem.getContext("2d");
+    for (let i = 0; i < steps; i++) {
+        ctx.beginPath();
+        ctx.arc(x + i * 40, y + i * 45, r, 0, Math.PI * 2);
+        let constCurrentColor = startColorPattern + (endColorPattern - startColorPattern) * i / steps;
+        ctx.fillStyle = rgb(constCurrentColor, constCurrentColor, constCurrentColor);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+    }
+}
 
-ctx.beginPath();
-ctx.arc(30, 35, 15, 0, 2 * Math.PI, false);
-ctx.fillStyle = '#FFFFFF';
-ctx.fill();
-ctx.stroke();
-ctx.closePath();
-ctx.beginPath();
-ctx.arc(70, 75, 15, 0, 2 * Math.PI, false);
-ctx.fillStyle = '#D5D8DC';
-ctx.fill();
-ctx.stroke();
-ctx.closePath();
-ctx.beginPath();
-ctx.arc(110, 115, 15, 0, 2 * Math.PI, false);
-ctx.fillStyle = '#BDBDBD';
-ctx.fill();
-ctx.stroke();
-ctx.closePath();
-ctx.beginPath();
-ctx.arc(150, 155, 15, 0, 2 * Math.PI, false);
-ctx.fillStyle = '#A4A4A4';
-ctx.fill();
-ctx.stroke();
-ctx.closePath();
-ctx.beginPath();
-ctx.arc(190, 195, 15, 0, 2 * Math.PI, false);
-ctx.fillStyle = '#585858';
-ctx.fill();
-ctx.stroke();
-ctx.closePath();
-ctx.beginPath();
-ctx.arc(230, 235, 15, 0, 2 * Math.PI, false); //6
-ctx.fillStyle = '#2E2E2E';
-ctx.fill();
-ctx.stroke();
-ctx.closePath();
+function rgb(r, g, b) {
+    r = Math.floor(r);
+    g = Math.floor(g);
+    b = Math.floor(b);
+    return ["rgb(", r, ",", g, ",", b, ")"].join("");
+}
