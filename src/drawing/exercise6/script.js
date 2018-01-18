@@ -1,24 +1,25 @@
 const canvasElem = document.getElementById("canvas");
 if (canvasElem.getContext) {
-    const x = 25;
-    const y = 25;
+    const margin = 5;
     const r = 20;
-    const startColorPattern = 300;
-    const endColorPattern = 10;
+    const startColorPattern = 255;
+    const endColorPattern = 0;
     const steps = 6;
+    const xstep = 40;
+    const ystep = 40;
     const ctx = canvasElem.getContext("2d");
     for (let i = 0; i < steps; i++) {
         ctx.beginPath();
-        ctx.arc(x + i * 40, y + i * 45, r, 0, Math.PI * 2);
-        let constCurrentColor = startColorPattern + (endColorPattern - startColorPattern) * i / steps;
-        ctx.fillStyle = rgb(constCurrentColor, constCurrentColor, constCurrentColor);
+        ctx.arc(r + margin + i * xstep, r + margin + i * ystep, r, 0, Math.PI * 2);
+        let color = startColorPattern + (endColorPattern - startColorPattern) * i / (steps - 1);
+        ctx.fillStyle = getColorInRgb(color, color, color);
         ctx.fill();
         ctx.stroke();
         ctx.closePath();
     }
 }
 
-function rgb(r, g, b) {
+function getColorInRgb(r, g, b) {
     r = Math.floor(r);
     g = Math.floor(g);
     b = Math.floor(b);
